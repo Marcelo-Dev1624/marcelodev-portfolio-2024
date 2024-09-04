@@ -161,6 +161,7 @@
     background-color: var(--color-primary-blur);
   }
 
+  
   .section {
     min-height: 100vh;
     display: flex;
