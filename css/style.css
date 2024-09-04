@@ -161,7 +161,7 @@
     background-color: var(--color-primary-blur);
   }
 
-  
+
   .section {
     min-height: 100vh;
     display: flex;
@@ -272,7 +272,7 @@ nav {
 }
 
 .nav-logo {
-  width: 60px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -606,6 +606,7 @@ nav {
   caret-color: var(--accent-color);
   transition: 300ms ease-in-out;
 
+
   &:focus {
     background-color: var(--color-secondary-30);
     color: var(--accent-color);
@@ -631,14 +632,10 @@ nav {
     flex-direction: row;
     justify-self: center;
     align-items: flex-end;
-    bottom: -40px;
+    top: 0px;
 
-    & img {
-      width: 40%;
-    }
-
-    & h1 {
-      font-size: 6rem;
+    & img{
+      width: 100%;
     }
   }
 

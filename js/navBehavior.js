@@ -15,7 +15,7 @@ if (activeSectionId) {
     `.menu-item[data-section-id="${activeSectionId}"]`
   );
 
-  if (activeMenuItem || homeRedirect) {
+  if (activeMenuItem) {
     // Remove active class from all menu items
     menuItems.forEach((item) => item.classList.remove("active"));
     // Add active class to the corresponding menu item
@@ -151,3 +151,4 @@ navToggler.addEventListener("click", () => {
     });
   }
 });
+
