@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>MarceloDev</title>
+
+
+    <!--DM Sans font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bg.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+</head>
+
+<body class="dark-mode overflow-x-hidden">
+
+
+    <nav class="">
+        <i id="colorSchemeSwitcher" class="fa-solid hidden fa-sun glassmorphism accent"></i>
+
+        <div id="innerNav" class="inner-nav">
+            <a class="nav-logo" id="navLogo" href="#Home" data-section-id="Home"><img id="navLogoImg"
+                    src="images/logo_blanco.png" alt="""></a>
+
+                    <button id="navToggler" class="nav-toggler ">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+
+                <div class="nav-menu ">
+                <ul class="menu">
+                    <li><a class="menu-item active" id="link-to-home" href="#Home" data-section-id="Home"><i
+                                class="mx-2 fa-solid fa-house"></i>Home</a></li>
+                    <li><a class="menu-item" id="link-to-about" href="#About" data-section-id="About"><i
+                                class="fa-regular fa-address-card mx-2"></i>About</a></li>
+                    <li><a class="menu-item" id="link-to-projects" href="#Projects" data-section-id="Projects"><i
+                                class="fa-solid fa-code mx-2 "></i>Projects</a></li>
+                    <li><a class="menu-item" id="link-to-contact" href="/contact.html#Contact"
+                            data-section-id="Contact"><i class="fa-regular fa-envelope mx-2"></i>Contact</a></li>
+
+
+                    <span class="menuActiveIndicator"></span>
+                </ul>
+
+        </div>
+        
+        </div>
+    </nav>
+
+    <div class="sections-mv-container">
+        <section class="section" id="Home">
+
+
+            <div class="home-elements lg:mt-16">
+                <div>
+                    <h1 class="header-text-1">Hello <br>I'm <span class="accent">Marcelo</span> </h1>
+
+                    <div class="feature-box home-feature-location glassmorphism">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>San Jose, Costa Rica</p>
+                    </div>
+                </div>
+
+                <img src="images/memoji.png" alt="">
+
+
+            </div>
+
+            <div class="bg-area-index">
+                <ul class="bg-circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <section class="section" id="About">
+            <div class="px-20 sm:px-24 md:px-22  lg:py-4 xl:px-72">
+
+                <div class="flex px-4 lg:gap-72">
+                    <h1 class="header-text-2 ">I'm a <span class=" accent">Junior <br>Software Engineer</span> </h1>
+                    <i id="aboutCodeIcon" class="fa-solid fa-code accent"></i>
+
+                </div>
+
+
+
+                <div class="line my-10"></div>
+
+                <div>
+                    <p class="mv-h3 mb-12">My name is <span class="accent">Marcelo Villalobos</span>, and I'm passionate
+                        for
+                        <span class="accent">Front-End
+                            Development,</span> where I enjoy the creativity and challenge it brings.
+                        <br><br>
+
+                        I’m <span class="accent">open to opportunities</span> with companies, small businesses, or
+                        entrepreneurs, to help them strenghten their business, providing a powerful website that
+                        reflects
+                        their vision and purpose.
+                    </p>
+
+                    <a id="btnToContact" href="/contact.html#Contact"
+                        class="btn full glassmorphism mv-h3 accent">Contact
+                        Me</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="px-12 py-20  md:px-16 lg:px-24 xl:px-60 xl:py-2 text-center">
+            <h1 class="header-text-3 accent">My Skills</h1>
+            <div class="line my-6"></div>
+
+
+            <div class="techStack container accent">
+                <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-3   gap-4 ">
+                    <div class="techStack-item glassmorphism ">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="techStack-item glassmorphism ">
+                        <i class="fa-brands fab fa-css3-alt"></i>
+                    </div>
+                    <div class="techStack-item glassmorphism ">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div class="techStack-item glassmorphism ">
+                        <i class="fa-brands fab fa-bootstrap"></i>
+                    </div>
+                    <div class="techStack-item glassmorphism ">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <div class="techStack-item glassmorphism ">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="grid-cols-subgrid col-span-3">
+                        <div class="techStack-item glassmorphism ">
+                            <i class="fab fa-react"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <section class="section pt-40 flex-col justify-center items-center" id="Projects">
+
+            <h1 class="header-text-2  accent">¡Take a look at my work!</h1>
+
+            <div class="project style-1">
+                <img class="glassmorphism" src="/images/projects-covers/gourmetto.png" alt="">
+
+                <div class="project-content glassmorphism">
+                    <div class="project-title">
+                        <h1 class="header-text-4"> Gourmetto's Website</h1>
+                        <div class="technologies">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-brands fab fa-bootstrap"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body ">
+                        <div class="project-text">
+                            <p class="mv-text">
+                                <span class="accent">Gourmetto</span> is a family-owned small business, operating in
+                                Costa Rica, which specializes in crafing high-end gourmet products.
+                                Their brand stand out for bringing <span class="accent">quality</span> to their clients,
+                                as well as a <span class="accent">premium culinary experience</span>.
+                                <br><br>
+
+                                They desired to provide a great experience to their clients, everytime they wanted to
+                                order some products, that why we worked together, and created the website they were
+                                looking for.
+
+
+                        </div>
+
+
+                        <div class="project-footer">
+                            <a href="" class="btn glassmorphism mv-h3 px-16 accent">Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="project style-2">
+                <img class="glassmorphism" src="/images/projects-covers/IDS.png" alt="">
+
+                <div class="project-content glassmorphism">
+                    <div class="project-title">
+                        <h1 class="header-text-4"> Administration App - IDS</h1>
+                        <div class="technologies">
+                            <i class="fa-brands fa-java"></i>
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-text">
+                            <p class="mv-text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur, nihil. Neque,
+                                facilis magni cum enim impedit aperiam dolores a assumenda quidem. Adipisci dolor amet
+                                delectus, dolore reprehenderit laudantium, autem corporis fugit possimus ex aliquid,
+                                repellendus hic distinctio perspiciatis excepturi expedita culpa ea. Fuga non id
+                                voluptatum. Harum suscipit, omnis laudantium maxime assumenda libero dolore quasi iste,
+                                veritatis eveniet repellat aut, animi necessitatibus maiores similique accusantium natus
+                                minus praesentium blanditiis excepturi illo sit vero voluptatum nostrum? Distinctio
+                                ipsam neque fuga perspiciatis ipsum nobis architecto a qui, beatae veritatis! Quo
+                                doloremque itaque ratione id voluptatum, ipsam earum molestias sequi nesciunt, illum,
+                                cupiditate aut repellat et dignissimos nemo modi! Totam repudiandae suscipit rem
+                                voluptatibus at ab laboriosam harum est, error asperiores dolores alias qui doloribus
+                                odit, libero numquam, sapiente similique ex voluptates corporis. Officiis sequi
+                                voluptate nulla, aliquid velit quibusdam, deserunt aut cupiditate dolores eum modi
+                                debitis dolore vero maxime omnis molestias non quis libero nobis porro! Voluptates
+                                porro, quidem aspernatur consequatur labore quam? Dolorum odio cumque exercitationem
+                                ipsa repudiandae, iste facilis, a illum suscipit sapiente laborum, veritatis odit eos
+                                eaque numquam necessitatibus pariatur dolore non! Dicta praesentium harum officia, fuga
+                                voluptate tenetur illum molestias alias rem possimus iusto velit commodi eum magni
+                                repellendus aperiam quidem doloremque et optio iure quaerat. Voluptas excepturi iure
+                                ducimus eaque accusantium perferendis qui non aspernatur iste repellat!
+                            </p>
+                        </div>
+
+
+                        <div class="project-footer">
+                            <a href="" class="btn glassmorphism mv-h3 px-16 accent">Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+    </div>
+
+    <div class="footer glassmorphism">
+        <div class="footer-logo">
+            <img src="/images/logo_blanco.png" alt="">
+            <h1>MarceloDev</h1>
+        </div>
+        <div class="footer-body">
+            <div class="footer-col">
+                <h2 class="mv-h1 accent">About</h2>
+                <ul>
+                    <li><a class="" href="#Home" data-section-id="Home">Home</a></li>
+                    <div class="line"></div>
+                    <li><a class="" href="#Projects" data-section-id="Projects">Get to know me</a></li>
+                    <div class="line"></div>
+                    <li><a class="" href="#About" data-section-id="About">Look at my work</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2 class="mv-h1 accent">My Socials</h2>
+                <ul>
+                    <li><a class="" href="#Home">Github</a></li>
+                    <div class="line"></div>
+                    <li><a class="" href="#Projects">Instagram</a></li>
+                    <div class="line"></div>
+                    <li><a class="" href="#About">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h1 class="mv-h1 accent">Wanna work together? </h1>
+                <h3 class="mv-h3"> Here's my Email</h3>
+                <a href="" class="btn glassmorphism accent"> marcelodev1624@gmail.com</a>
+
+                <p class="footer-copyright mv-text">Copyright, 2024</p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/0003ddee2d.js" crossorigin="anonymous"></script>
+    <script src="js/navBehavior.js"></script>
+    <script src="js/triggerBtn.js"></script>
+    <script src="js/colorSchemeSwitch.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

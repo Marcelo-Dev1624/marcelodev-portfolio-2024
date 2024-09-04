@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <!--DM Sans font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bg.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    
+    
+    
+    <nav>
+        <i id="colorSchemeSwitcher" class="fa-solid fa-sun glassmorphism  accent"></i>
+        <div id="innerNav" class="inner-nav">
+
+            <a class="nav-logo" id="navLogo" href="index.html#Home" data-section-id="Home"><img id="navLogoImg" src="images/logo_blanco.png" alt="""></a>
+
+            <div class=" nav-menu">
+                <ul class="menu">
+                    <li><a class="menu-item active" id="link-to-home" href="index.html#Home" data-section-id="Home"><i
+                                class="mx-2 fa-solid fa-house"></i>Home</a></li>
+                    <li><a class="menu-item" id="link-to-about" href="index.html#About" data-section-id="About"><i
+                                class="fa-regular fa-address-card mx-2"></i>About</a></li>
+                    <li><a class="menu-item" id="link-to-projects" href="index.html#Projects" data-section-id="Projects"><i
+                                class="fa-solid fa-code mx-2 "></i>Projects</a></li>
+                    <li><a class="menu-item" id="link-to-contact" href="/contact.html#Contact"
+                            data-section-id="Contact"><i class="fa-regular fa-envelope mx-2"></i>Contact</a></li>
+                    <span class="menuActiveIndicator"></span>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="section" id="Contact">
+
+
+        <form action="https://formsubmit.co/marcelodev1624@gmail.com" method="POST" id="contactForm"
+            class="contact-form">
+
+            <h1 class="header-text-2 accent mt-20">Let's work together</h1>
+            <p class="mv-text px-4 mb-4">Ready to bring your project to life? Let’s team up and make it happen! You can
+                count on me to get things done, and done right."</p>
+
+            <div class=" contact-form-two-element-row">
+
+                <div class="contact-form-input-group">
+                    <label for="name" class="mv-h3">1 - What's your name?</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name"
+                        class="form-input glassmorphism">
+                </div>
+
+                <div class="contact-form-input-group">
+                    <label for="email" class="mv-h3">2 - What's your email?</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email"
+                        class="form-input glassmorphism">
+                </div>
+
+            </div>
+
+            <div class="contact-form-single-element-row">
+
+                <div class="contact-form-input-group">
+                    <label for="company" class="mv-h3">3 - What's the name of your company/organization?</label>
+                    <input type="text" id="company" name="company" required placeholder="Your company/organization name"
+                        class="form-input glassmorphism">
+                </div>
+
+            </div>
+
+            <div class="contact-form-single-element-row">
+
+                <div class="contact-form-input-group">
+                    <label for="message" class="mv-h3">4 - What do you want me to help you with?</label>
+                    <textarea name="message" id="message" cols="40" rows="5" class="form-input glassmorphism"
+                        placeholder="¡Tell me more!">
+                       </textarea>
+                </div>
+                <input type="hidden" name="_captcha" value="false">
+
+                <button type="submit" target="_blank"
+                    class="btn glassmorphism mv-h3 accent mt-6  max-w-xs">Send</button>
+            </div>
+
+
+
+        </form>
+
+        <div class="line-vertical mt-16"></div>
+
+        <div class="contact-aside flex-col grid gap-8 text-center justify-center items-center">
+
+            <div class="cv-container grid gap-4">
+                <h1 class="header-text-3 accent">Download my CV</h1>
+                <a href="/images/1Asset 11@3x.png" class="btn glassmorphism secondary mv-h3 " download="/images/1Asset 11@3x.png"><i
+                        class="fa-solid fa-file-arrow-down mx-2"></i>Download</a>
+            </div>
+
+            <div class="email-container grid gap-4">
+                <h1 class="header-text-3 accent">My Email</h1>
+                <a class="btn glassmorphism secondary mv-h3">marcelodev1624@gmail.com</a>
+            </div>
+
+
+
+
+            <div class="socials-container grid grid-cols-1">
+                <h1 class="header-text-3 accent">My socials</h1>
+                <div class="grid grid-cols-3">
+                    <a href="https://github.com/marcelo-dev1624" target="_blank" class="social-media-icon secondary glassmorphism"><i class="fab fa-github"></i></a>
+
+                    <a href="https://instagram.com/marcelo_v1624" target="_blank" class="social-media-icon secondary glassmorphism"><i class="fab fa-instagram"></i></a>
+
+                    <a href="" target="_blank" class="social-media-icon secondary glassmorphism"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        
+        <div class="bg-area-contact">
+            <ul class="bg-circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="footer glassmorphism">
+        <div class="footer-logo">
+            <img src="/images/logo_blanco.png" alt="">
+            <h1>MarceloDev</h1>
+        </div>
+        <div class="footer-body">
+            <div class="footer-col">
+                <h2 class="mv-h1 accent">About</h2>
+                <ul>
+                    <li><a class=""  href="#Home" data-section-id="Home">Home</a></li>
+                    <div class="line"></div>
+                    <li><a class=""  href="#Projects" data-section-id="Projects">Get to know me</a></li>
+                    <div class="line"></div>
+                    <li><a class="" href="#About" data-section-id="About">Look at my work</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2 class="mv-h1 accent">My Socials</h2>
+                <ul>
+                    <li><a class=""  href="#Home" >Github</a></li>
+                    <div class="line"></div>
+                    <li><a class=""  href="#Projects" >Instagram</a></li>
+                    <div class="line"></div>
+                    <li><a class=""  href="#About" >LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h1 class="mv-h1 accent">Wanna work together? </h1>
+                <h3 class="mv-h3"> Here's my Email</h3>
+                <a href="" class="btn glassmorphism accent"> marcelodev1624@gmail.com</a>
+
+                <p class="footer-copyright mv-text">Copyright, 2024</p>
+            </div>
+
+            
+        </div>
+
+        
+    </div>
+
+    
+    
+    
+    
+    
+    <script src="https://kit.fontawesome.com/0003ddee2d.js" crossorigin="anonymous"></script>
+    <script src="js/navBehavior.js"></script>
+    <script src="js/textArea.js"></script>
+    <script src="js/triggerBtn.js"></script>
+    <script src="js/colorSchemeSwitch.js"></script>
+
+</body>
+
+</html>
