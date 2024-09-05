@@ -22,28 +22,35 @@
 
 <body>
 
-    
-    
-    
-    <nav>
-        <i id="colorSchemeSwitcher" class="fa-solid fa-sun glassmorphism  accent"></i>
+    <nav class="">
+        <i id="colorSchemeSwitcher" class="fa-solid hidden fa-sun glassmorphism accent"></i>
+
         <div id="innerNav" class="inner-nav">
+            <a class="nav-logo" id="navLogo" href="index.html#Home" data-section-id="Home"><img id="navLogo"
+                    src="images/logo_completo_blanco.png" alt="logo"></a>
 
-            <a class="nav-logo" id="navLogo" href="index.html#Home" data-section-id="Home"><img id="navLogoImg" src="images/logo_blanco.png" alt="""></a>
+                    <button id="navToggler" class="nav-toggler">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                </button>
 
-            <div class=" nav-menu">
-                <ul class="menu">
-                    <li><a class="menu-item active" id="link-to-home" href="index.html#Home" data-section-id="Home"><i
-                                class="mx-2 fa-solid fa-house"></i>Home</a></li>
-                    <li><a class="menu-item" id="link-to-about" href="index.html#About" data-section-id="About"><i
-                                class="fa-regular fa-address-card mx-2"></i>About</a></li>
-                    <li><a class="menu-item" id="link-to-projects" href="index.html#Projects" data-section-id="Projects"><i
-                                class="fa-solid fa-code mx-2 "></i>Projects</a></li>
-                    <li><a class="menu-item" id="link-to-contact" href="/contact.html#Contact"
-                            data-section-id="Contact"><i class="fa-regular fa-envelope mx-2"></i>Contact</a></li>
-                    <span class="menuActiveIndicator"></span>
-                </ul>
-            </div>
+                <div class="nav-menu ">
+                    <ul class="menu">
+                        <li><a class="menu-item active" id="link-to-home" href="index.html#Home" data-section-id="Home"><i
+                                    class="mx-2 fa-solid fa-house"></i>Home</a></li>
+                        <li><a class="menu-item" id="link-to-about" href="index.html#About" data-section-id="About"><i
+                                    class="fa-regular fa-address-card mx-2"></i>About</a></li>
+                        <li><a class="menu-item" id="link-to-projects" href="index.html#Projects" data-section-id="Projects"><i
+                                    class="fa-solid fa-code mx-2 "></i>Projects</a></li>
+                        <li><a class="menu-item" id="link-to-contact" href="contact.html#Contact"
+                                data-section-id="Contact"><i class="fa-regular fa-envelope mx-2"></i>Contact</a></li>
+
+
+                        <span class="menuActiveIndicator"></span>
+                    </ul>
+
+                </div>
 
         </div>
     </nav>

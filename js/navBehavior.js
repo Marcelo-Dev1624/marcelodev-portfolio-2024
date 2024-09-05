@@ -56,19 +56,30 @@ menuItems.forEach((menuItem) => {
 
     // Update active link and indicator immediately
     updateActiveLinkAndIndicator();
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      if (!navMenu.classList.contains("closing")) {
+        navMenu.classList.add("closing");
+        navMenu.classList.remove("opened");
+        navToggler.classList.remove("opened");
+      }
+    }
   });
 });
 
 // Add event listener to window scroll event
 window.addEventListener("scroll", () => {
-  const currentScrollPosition = window.scrollY;
-  if (currentScrollPosition > 0) {
-    innerNav.classList.add("scrolled");
-  } else {
-    innerNav.classList.remove("scrolled");
+  // Check if viewport width is above iPad size (768px)
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    const currentScrollPosition = window.scrollY;
+    if (currentScrollPosition > 0) {
+      innerNav.classList.add("scrolled");
+    } else {
+      innerNav.classList.remove("scrolled");
+    }
+    // Update active link and indicator based on scroll position
+    updateActiveLinkAndIndicator();
   }
-  // Update active link and indicator based on scroll position
-  updateActiveLinkAndIndicator();
 });
 
 function updateActiveLinkAndIndicator() {
@@ -124,31 +135,30 @@ function updateActiveIndicator() {
 
 //Animate navbar items on display
 navToggler.addEventListener("click", () => {
-  navMenu.classList.toggle("opened");
-  navToggler.classList.toggle("opened");
+  if (!navMenu.classList.contains("closing")) {
+    navMenu.classList.toggle("opened");
+    navToggler.classList.toggle("opened");
 
-  if (
-    innerNav.classList.contains("scrolled") &&
-    navMenu.classList.contains("opened")
-  ) {
-    
-    innerNav.classList.add("scrolled");
-  }
-
-  const menuItems = document.querySelectorAll(".nav-menu .menu li");
-
-  if (!navMenu.classList.contains("opened")) {
-    menuItems.forEach((item, index) => {
+    if (navMenu.classList.contains("opened")) {
+      const menuItems = document.querySelectorAll(".nav-menu .menu li");
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("show");
+        }, index * 100); // 100ms de retraso entre cada elemento
+      });
+    } else {
+      navMenu.classList.add("closing");
+      const menuItems = document.querySelectorAll(".nav-menu .menu li");
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.remove("show");
+        }, index * 100); // 100ms de retraso entre cada elemento al cerrar
+      });
+      navMenu.classList.remove("opened");
+      navToggler.classList.remove("opened");
       setTimeout(() => {
-        item.classList.remove("show");
-      }, index * 100); // 100ms de retraso entre cada elemento
-    });
-  } else if (navMenu.classList.contains("opened")) {
-    menuItems.forEach((item, index) => {
-      setTimeout(() => {
-        item.classList.add("show");
-      }, index * 100); // 100ms de retraso entre cada elemento al cerrar
-    });
+        navMenu.classList.remove("closing");
+      }, 1000); // wait for the animation to finish before removing the classes
+    }
   }
 });
-

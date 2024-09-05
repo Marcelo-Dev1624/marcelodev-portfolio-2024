@@ -74,143 +74,141 @@
   }
 }
 
-  html.dark-mode {
-    scroll-behavior: smooth;
-    scrollbar-color: var(--accent-color) transparent;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
-  }
+html.dark-mode {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--accent-color) transparent;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+}
 
-  html.light-mode {
-    scroll-behavior: smooth;
-    scrollbar-color: var(--accent-color) transparent;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
-  }
+html.light-mode {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--accent-color) transparent;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: var(--color-primary-100);
-    font-family: "Poppins", sans-serif;
-    color: var(--color-secondary-100);
+body {
+  background-color: var(--color-primary-100);
+  font-family: "Poppins", sans-serif;
+  color: var(--color-secondary-100);
 
-    transition: all 300ms ease-in-out;
-  }
+  transition: all 300ms ease-in-out;
+}
 
-  span {
-    transition: all 300ms ease-in-out;
-  }
+span {
+  transition: all 300ms ease-in-out;
+}
 
-  .header-text-1 {
-    font-size: 5.625rem;
-    font-weight: 800;
-  }
-  .header-text-2 {
-    font-size: 4.375rem;
-    font-weight: 700;
-  }
-  .header-text-3 {
-    font-size: 3.125rem;
-    font-weight: 600;
-  }
-  .header-text-4 {
-    font-size: 2.5rem;
-    font-weight: 600;
-  }
+.header-text-1 {
+  font-size: 5.625rem;
+  font-weight: 800;
+}
+.header-text-2 {
+  font-size: 4.375rem;
+  font-weight: 700;
+}
+.header-text-3 {
+  font-size: 3.125rem;
+  font-weight: 600;
+}
+.header-text-4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
 
-  .mv-h1 {
-    font-size: 1.875rem;
-    font-weight: 500;
-  }
-  .mv-h2 {
-    font-size: 1.5rem;
-  }
-  .mv-h3 {
-    font-size: 1.25rem;
-  }
-  .mv-text {
-    font-size: 1.125rem;
-  }
+.mv-h1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+.mv-h2 {
+  font-size: 1.5rem;
+}
+.mv-h3 {
+  font-size: 1.25rem;
+}
+.mv-text {
+  font-size: 1.125rem;
+}
 
-  .primary {
+.primary {
+  color: var(--color-primary-100) !important;
+}
+
+.secondary {
+  color: var(--color-secondary-100) !important;
+}
+
+.accent {
+  color: var(--accent-color) !important;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary-blur);
+}
+.line-vertical {
+  width: 2px; /* Ajusta el ancho a tu preferencia */
+  height: 80vh; /* Ocupa el 100% de la altura del viewport */
+  background-color: var(--color-primary-blur);
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glassmorphism {
+  background-color: var(----glassmorphism-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(100, 100, 100, 0.4);
+}
+
+.feature-box {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-box > * {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    background-color: var(--accent-color) !important;
     color: var(--color-primary-100) !important;
   }
 
-  .secondary {
-    color: var(--color-secondary-100) !important;
+  &:focus {
+    background-color: var(--accent-color) !important;
+    color: var(--color-primary-100) !important;
   }
-
-  .accent {
-    color: var(--accent-color) !important;
-  }
-
-  .line {
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-primary-blur);
-  }
-  .line-vertical {
-    width: 2px; /* Ajusta el ancho a tu preferencia */
-    height: 80vh; /* Ocupa el 100% de la altura del viewport */
-    background-color: var(--color-primary-blur);
-  }
-
-
-  .section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .glassmorphism {
-    background-color: var(----glassmorphism-color);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(100, 100, 100, 0.4);
-  }
-
-  .feature-box {
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .feature-box > * {
-    font-size: 1.25rem;
-    color: var(--accent-color);
-  }
-
-  .btn {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: 200ms all ease-in-out;
-
-    &:hover {
-      background-color: var(--accent-color) !important;
-      color: var(--color-primary-100) !important;
-    }
-
-    &:focus {
-      background-color: var(--accent-color) !important;
-      color: var(--color-primary-100) !important;
-    }
-  }
-
+}
 
 /* GLOBAL STYLES */
 
@@ -261,7 +259,6 @@ nav {
 
   border-radius: 50px;
   transition: all 300ms ease-in-out;
-
 }
 
 .inner-nav.scrolled {
@@ -276,10 +273,6 @@ nav {
   display: flex;
   justify-content: center;
   align-self: center;
-}
-
-#navLogoImg {
-  width: 100%;
 }
 
 .nav-menu {
@@ -606,7 +599,6 @@ nav {
   caret-color: var(--accent-color);
   transition: 300ms ease-in-out;
 
-
   &:focus {
     background-color: var(--color-secondary-30);
     color: var(--accent-color);
@@ -634,7 +626,7 @@ nav {
     align-items: flex-end;
     top: 0px;
 
-    & img{
+    & img {
       width: 100%;
     }
   }
@@ -697,178 +689,181 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
-  
-    .header-text-1 {
-      font-size: 3.125rem; /* 50px */
-      font-weight: 800;
-    }
-    .header-text-2 {
-      font-size: 2.5rem; /* 40px */
-      font-weight: 700;
-    }
-    .header-text-3 {
-      font-size: 1.875rem; /* 30px */
-      font-weight: 600;
-    }
-    .header-text-4 {
-      font-size: 1.625rem; /* 26px */
-      font-weight: 600;
-    }
-    
-    .mv-h1 {
-      font-size: 1.5rem; /* 24px */
-      font-weight: 500;
-    }
-    .mv-h2 {
-      font-size: 1.375rem; /* 22px */
-    }
-    .mv-h3 {
-      font-size: 1.125rem; /* 18px */
-    }
-    .mv-text {
-      font-size: 1rem; /* 16px */
-    }
+  .header-text-1 {
+    font-size: 3.125rem; /* 50px */
+    font-weight: 800;
+  }
+  .header-text-2 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+  }
+  .header-text-3 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 600;
+  }
+  .header-text-4 {
+    font-size: 1.625rem; /* 26px */
+    font-weight: 600;
+  }
 
-    #colorSchemeSwitcher{
-      display: none;
-      opacity: 0;
-    }
+  .mv-h1 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+  }
+  .mv-h2 {
+    font-size: 1.375rem; /* 22px */
+  }
+  .mv-h3 {
+    font-size: 1.125rem; /* 18px */
+  }
+  .mv-text {
+    font-size: 1rem; /* 16px */
+  }
 
-    
-
-    /* Navbar Configs */
-
-.nav-toggler {
-  position: fixed;
-  right: 30px;
-  display: block;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.nav-toggler .bar {
-  display: block;
-  width: 30px;
-  height: 2px;
-  background-color: var(--color-secondary-100);
-  margin: 5px auto;
-  transition: 0.4s;
-  z-index: 201;
-}
-
-.nav-toggler.opened .bar:nth-child(1) {
-  opacity: 0;
-}
-
-.nav-toggler.opened .bar:nth-child(2) {
-  opacity: 1;
-  transform: rotate(45deg);
-}
-
-.nav-toggler.opened .bar:nth-child(3) {
-  transform: rotate(135deg) translate(-5px, 5px);
-}
-
-nav {
-  padding: 0;
-  height: 4.6875rem;
-}
-
-.nav-logo {
-  position: absolute;
-  left: 30px;
-}
-
-#navToggler {
-  display: block;
-}
-
-.menuActiveIndicator{
-  opacity: 0;
-}
-
-.inner-nav {
-  width: 100%;
-  border-radius: 0;
-  padding: 0;
-}
-.nav-menu {
-  position: fixed; /* Asegúrate de que el menú esté fijo en la pantalla */
-  top: 75px; /* Posición en la parte superior */
-  left: 0; /* Posición en el borde izquierdo */
-  width: 100%; /* Ocupa todo el ancho */
-  height: 30vh; /* Ocupa toda la altura de la ventana */
-  display: none; /* Oculta el menú por defecto */
-  opacity: 0; /* Inicialmente invisible */
-  z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
-  transition: opacity 300ms ease-in-out; /* Transición para la opacidad */
-  
-}
-
-.nav-menu.opened {
-  display: block; /* Muestra el menú cuando está abierto */
-  opacity: 1; /* Visible cuando está abierto */
-}
-
-.nav-menu .menu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  gap: 0 !important;
-
-}
-
-.nav-menu .menu li {
-  display: block;
-  width: 100%;
-  margin: 0;
-  opacity: 0;
-  transform: translateY(-20px); /* Mueve los elementos hacia arriba inicialmente */
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out; /* Transiciones para opacidad y movimiento */
-
-
-}
-
-.nav-menu .menu li.show {
-  opacity: 1; /* Visible cuando tiene la clase 'show' */
-  transform: translateY(0); /* Restablece la posición original */
-  
-  
-}
-
-/* Añadir delays para la animación de cada elemento */
-.nav-menu .menu li:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.nav-menu .menu li:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.nav-menu .menu li:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.nav-menu .menu li:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-/* Agrega más si tienes más elementos */
-
-.nav-menu .menu li .menu-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  padding: 1rem 1.5rem; /* Ajusta el padding si es necesario */
-}
-
+  #colorSchemeSwitcher {
+    display: none;
+    opacity: 0;
+  }
 
   /* Navbar Configs */
 
-    
+  .nav-toggler {
+    position: fixed;
+    right: 30px;
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .nav-toggler .bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-secondary-100);
+    margin: 5px auto;
+    transition: 0.4s;
+    z-index: 201;
+  }
+
+  .nav-toggler.opened .bar:nth-child(1) {
+    opacity: 0;
+  }
+
+  .nav-toggler.opened .bar:nth-child(2) {
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  .nav-toggler.opened .bar:nth-child(3) {
+    transform: rotate(135deg) translate(-5px, 5px);
+  }
+
+
+
+  nav {
+    padding: 0;
+    height: 4.6875rem;
+    background-color: var(--color-primary-100);
+  }
+
+  .nav-logo {
+    position: absolute;
+    left: 30px;
+  }
+
+  #navToggler {
+    display: block;
+  }
+
+  .menuActiveIndicator {
+    opacity: 0;
+  }
+
+  .inner-nav {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 75px;
+    width: 100%;
+    height: 0;
+    display: block;
+    z-index: 1000;
+    overflow: hidden;
+    transition: height 400ms ease-in-out;
+    background-color: var(--color-primary-100);
+  }
+
+  .nav-menu.opened {
+    height: 30vh;
+  }
+
+  .nav-menu .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: 0 !important;
+  }
+
+  .nav-menu .menu li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    opacity: 0;
+
+    transition: opacity 600ms ease-in-out;
+  }
+
+  .nav-menu .menu li.show {
+    opacity: 1; /* Visible cuando tiene la clase 'show' */
+  }
+
+  .nav-menu.closing {
+    height: 0;
+
+    transition: height 600ms ease-in-out;
+  }
+
+  .nav-menu.closing .menu {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  /* Añadir delays para la animación de cada elemento */
+  .nav-menu .menu li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .nav-menu .menu li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+
+  .nav-menu .menu li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .nav-menu .menu li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  /* Agrega más si tienes más elementos */
+
+  .nav-menu .menu li .menu-item {
+    display: flex;
+    justify-content: flex-start;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem; /* Ajusta el padding si es necesario */
+  }
+
+
+
+  /* Navbar Configs */
 }
