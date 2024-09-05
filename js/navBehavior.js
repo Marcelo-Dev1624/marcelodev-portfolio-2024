@@ -1,3 +1,4 @@
+//Defining DOM elements
 const body = document.querySelector("body");
 const innerNav = document.getElementById("innerNav");
 const navToggler = document.getElementById("navToggler");
@@ -83,25 +84,33 @@ window.addEventListener("scroll", () => {
 });
 
 function updateActiveLinkAndIndicator() {
+  //Define variables
   const sections = document.querySelectorAll(".section");
   const currentScrollPosition = window.scrollY;
   let activeSectionId = null;
 
+  //Loop through each section
+
   sections.forEach((section) => {
+    //Define section bounds
     const sectionTop = section.offsetTop;
     const sectionBottom = section.offsetTop + section.offsetHeight;
     if (
       currentScrollPosition >= sectionTop &&
       currentScrollPosition < sectionBottom
     ) {
+      //The active section, equals the section ID
       activeSectionId = section.id;
     }
   });
 
+  //If the active section
   if (activeSectionId) {
+    //Get the active link
     const activeMenuItem = document.querySelector(
       `.menu-item[data-section-id="${activeSectionId}"]`
     );
+    //Add active class to the active link
     if (activeMenuItem) {
       // Remove active class from all menu items
       menuItems.forEach((item) => item.classList.remove("active"));
@@ -114,8 +123,11 @@ function updateActiveLinkAndIndicator() {
   }
 }
 
+// Update active indicator
 function updateActiveIndicator() {
+  
   console.log("updateActiveIndicator called");
+  // Get the active section's ID from local storage
   const activeMenuItem = document.querySelector(".menu-item.active");
   if (activeMenuItem) {
     const rect = activeMenuItem.getBoundingClientRect();
