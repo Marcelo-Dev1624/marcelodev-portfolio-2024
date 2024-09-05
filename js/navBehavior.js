@@ -156,7 +156,9 @@ function updateActiveIndicator() {
 let isAnimating = false;
 
 navToggler.addEventListener("click", () => {
-  if (navMenu.classList.contains("closing")) return; // menu is currently animating, do nothing
+
+  if (isAnimating) return; // menu is currently animating, do nothing
+
   if (navMenu.classList.contains("opened")) {
     // Menu is already open, close it
     navMenu.classList.remove("opened");
@@ -193,41 +195,3 @@ navToggler.addEventListener("click", () => {
   }
 });
 
-navToggler.addEventListener("touchstart", (e) => {
-  e.preventDefault(); // prevent ghost clicks
-  if (navMenu.classList.contains("closing")) return; // menu is currently animating, do nothing
-  if (navMenu.classList.contains("opened")) {
-    // Menu is already open, close it
-    navMenu.classList.remove("opened");
-    navToggler.classList.remove("opened");
-    navMenu.classList.add("closing");
-    const menuItems = document.querySelectorAll(".nav-menu .menu li");
-    menuItems.forEach((item, index) => {
-      setTimeout(() => {
-        item.classList.remove("show");
-      }, index * 100); // 100ms de retraso entre cada elemento al cerrar
-    });
-    setTimeout(() => {
-      navMenu.classList.remove("closing");
-      isAnimating = false;
-    }, 1000); // wait for the animation to finish before removing the classes
-    if (!isAnimating) {
-      isAnimating = true;
-      updateActiveLinkAndIndicator(); // update active link and indicator
-    }
-  } else {
-    // Menu is closed, open it
-    navMenu.classList.add("opened");
-    navToggler.classList.add("opened");
-    const menuItems = document.querySelectorAll(".nav-menu .menu li");
-    menuItems.forEach((item, index) => {
-      setTimeout(() => {
-        item.classList.add("show");
-      }, index * 100); // 100ms de retraso entre cada elemento
-    });
-    if (!isAnimating) {
-      isAnimating = true;
-      updateActiveLinkAndIndicator(); // update active link and indicator
-    }
-  }
-});

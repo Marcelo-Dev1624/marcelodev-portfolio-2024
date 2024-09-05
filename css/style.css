@@ -796,7 +796,6 @@ nav {
     overflow: hidden;
     transition: height 400ms ease-in-out;
     background-color: var(--color-primary-100) !important;
-    padding: 1rem 0;
   }
 
   .nav-menu.opened {
