@@ -208,6 +208,9 @@ span {
     background-color: var(--accent-color) !important;
     color: var(--color-primary-100) !important;
   }
+
+  
+
 }
 
 /* GLOBAL STYLES */
@@ -703,35 +706,55 @@ nav {
 
 @media only screen and (max-width: 767px) {
 
+  .mobile-hidden{
+    display: none;
+    opacity: 0;
+  }
+
   .header-text-1 {
     font-size: 3.125rem; /* 50px */
     font-weight: 700;
+    text-align: center;
   }
   .header-text-2 {
     font-size: 2.5rem; /* 40px */
     font-weight: 600;
+    text-align: center;
   }
   .header-text-3 {
-    font-size: 1,875rem; /* 30px */
+    font-size: 2.1875rem; /* 35px */
     font-weight: 600;
+    text-align: center;
   }
   .header-text-4 {
-    font-size: 1.625rem; /* 26px */
+    font-size: 1.875rem; /* 30px */
     font-weight: 600;
+    text-align: center;
   }
 
   .mv-h1 {
     font-size: 1.5rem; /* 24px */
     font-weight: 500;
+    text-align: center;
   }
   .mv-h2 {
     font-size: 1.375rem; /* 22px */
+    text-align: center;
   }
   .mv-h3 {
     font-size: 1.125rem; /* 18px */
+    text-align: center;
   }
   .mv-text {
     font-size: 1rem; /* 16px */
+    text-align: center;
+  }
+
+  .btn{
+    &.mobile-full{
+      display: block;
+      width: 100%;
+    }
   }
 
   #colorSchemeSwitcher {
@@ -922,4 +945,48 @@ nav {
   
   /* HOME SECTION */
   
+  
+  
+  /* ABOUT SECTION */
+  
+  #About{
+    text-align: justify;
+  }
+
+  .about-title{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & h1{
+      font-size: 30px;
+    }
+  }
+
+  #aboutCodeIcon {
+    font-size: 50px;
+  }
+  
+  .techStack-item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  
+    padding: 1rem;
+  
+    transition: 200ms all ease-in-out;
+  
+    & img{
+      width: 25%;
+      object-fit: cover;
+    }
+  
+  }
+
+  /* ABOUT SECTION */
+
+
 }

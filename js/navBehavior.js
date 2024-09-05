@@ -89,34 +89,36 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Function to update the active link and indicator
 function updateActiveLinkAndIndicator() {
-  //Define variables
+  // Define variables
   const sections = document.querySelectorAll(".section");
+  const menuItems = document.querySelectorAll(".menu-item"); // Asegúrate de definir esto
   const currentScrollPosition = window.scrollY;
   let activeSectionId = null;
 
-  //Loop through each section
-
+  // Loop through each section
   sections.forEach((section) => {
-    //Define section bounds
-    const sectionTop = section.offsetTop;
-    const sectionBottom = section.offsetTop + section.offsetHeight;
+    // Define section bounds
+    const sectionTop = section.offsetTop - window.innerHeight / 2; // Adjusted to account for viewport height
+    const sectionBottom = section.offsetTop + section.offsetHeight - window.innerHeight / 2;
+    
     if (
       currentScrollPosition >= sectionTop &&
       currentScrollPosition < sectionBottom
     ) {
-      //The active section, equals the section ID
+      // The active section, equals the section ID
       activeSectionId = section.id;
     }
   });
 
-  //If the active section
+  // If there's an active section
   if (activeSectionId) {
-    //Get the active link
+    // Get the active link
     const activeMenuItem = document.querySelector(
       `.menu-item[data-section-id="${activeSectionId}"]`
     );
-    //Add active class to the active link
+    // Add active class to the active link
     if (activeMenuItem) {
       // Remove active class from all menu items
       menuItems.forEach((item) => item.classList.remove("active"));
@@ -128,6 +130,16 @@ function updateActiveLinkAndIndicator() {
     }
   }
 }
+
+// Listen for scroll events
+window.addEventListener("scroll", updateActiveLinkAndIndicator);
+
+// Also update the active section on resize
+window.addEventListener("resize", updateActiveLinkAndIndicator);
+
+// Optionally, run this on page load to set the active section initially
+document.addEventListener("DOMContentLoaded", updateActiveLinkAndIndicator);
+
 
 // Update active indicator
 function updateActiveIndicator() {
