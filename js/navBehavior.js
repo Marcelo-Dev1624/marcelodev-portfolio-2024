@@ -151,44 +151,36 @@ function updateActiveIndicator() {
   }
 }
 
-
 navToggler.addEventListener("click", () => {
+  const menuItems = document.querySelectorAll(".nav-menu .menu li");
+
   if (!navMenu.classList.contains("opened")) {
-    // Menu is already open, close it
+    // Abrir el menú
     navMenu.classList.add("opened");
     navToggler.classList.add("opened");
     navMenu.classList.remove("closing");
 
-    const menuItems = document.querySelectorAll(".nav-menu .menu li");
-
+    // Mostrar los elementos <li> con un retraso
     menuItems.forEach((item, index) => {
       setTimeout(() => {
         item.classList.add("show");
-      }, index * 100); // 100ms de retraso entre cada elemento al cerrar
+      }, index * 100); // 100ms de retraso entre cada elemento
     });
-
-    menuItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        setTimeout(() => {
-          navMenu.classList.remove("opened");
-          navToggler.classList.remove("opened");
-          menuItems.forEach((menuItem) => {
-            menuItem.classList.remove("show");
-          });
-        }, 300); // A small delay to ensure the click event doesn't interfere with the menu toggle
-      });
-    });
-    
 
   } else {
-    // Menu is closed, open it
-    navMenu.classList.remove("opened");
-    navToggler.classList.remove("opened");
-    const menuItems = document.querySelectorAll(".nav-menu .menu li");
+    // Cerrar el menú
+    // Ocultar los elementos <li> antes de aplicar la clase .closing
     menuItems.forEach((item, index) => {
       setTimeout(() => {
         item.classList.remove("show");
-      }, index * 100); // 100ms de retraso entre cada elemento
+      }, index * 100); // 100ms de retraso para ocultar cada elemento
     });
+
+    // Aplicar la clase .closing después de que los <li> se oculten
+    setTimeout(() => {
+      navMenu.classList.add("closing");
+      navMenu.classList.remove("opened");
+      navToggler.classList.remove("opened");
+    }, menuItems.length * 100 + 100); // Espera a que todos los <li> se oculten antes de cerrar
   }
 });
