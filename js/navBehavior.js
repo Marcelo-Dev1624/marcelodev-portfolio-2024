@@ -160,7 +160,7 @@ navToggler.addEventListener("click", () => {
     navToggler.classList.add("opened");
     navMenu.classList.remove("closing");
 
-    // Mostrar los elementos <li> con un retraso
+    // Mostrar los elementos <li> con un retraso (del primero al último)
     menuItems.forEach((item, index) => {
       setTimeout(() => {
         item.classList.add("show");
@@ -169,11 +169,11 @@ navToggler.addEventListener("click", () => {
 
   } else {
     // Cerrar el menú
-    // Ocultar los elementos <li> antes de aplicar la clase .closing
+    // Ocultar los elementos <li> de forma invertida (del último al primero)
     menuItems.forEach((item, index) => {
       setTimeout(() => {
         item.classList.remove("show");
-      }, index * 100); // 100ms de retraso para ocultar cada elemento
+      }, (index * 100)); // 100ms de retraso entre cada elemento (invertido)
     });
 
     // Aplicar la clase .closing después de que los <li> se oculten
