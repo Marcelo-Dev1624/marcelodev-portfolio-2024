@@ -795,11 +795,12 @@ nav {
     z-index: 1000;
     overflow: hidden;
     transition: height 400ms ease-in-out;
-    background-color: var(--color-primary-100);
+    background-color: var(--color-primary-100) !important;
   }
 
   .nav-menu.opened {
-    height: 30vh;
+    height: 32vh;
+    padding: 1rem 0;
   }
 
   .nav-menu .menu {
