@@ -154,10 +154,10 @@ span {
   width: 100%;
   height: 2px;
   background-color: var(--color-primary-blur);
-
 }
 
-.line-mobile, .line-vertical-mobile{
+.line-mobile,
+.line-vertical-mobile {
   display: none;
 }
 
@@ -204,6 +204,7 @@ span {
   text-align: center;
   cursor: pointer;
   transition: 200ms all ease-in-out;
+  border: 1.5px solid transparent;
 
   &:hover {
     background-color: var(--accent-color) !important;
@@ -214,8 +215,6 @@ span {
     background-color: var(--accent-color) !important;
     color: var(--color-primary-100) !important;
   }
-
-  
 
 }
 
@@ -381,11 +380,10 @@ nav {
 
   transition: 200ms all ease-in-out;
 
-  & img{
+  & img {
     width: 30%;
     object-fit: cover;
   }
-
 }
 
 /* ABOUT PAGE */
@@ -393,33 +391,44 @@ nav {
 /* PROJECTS PAGE */
 
 .project {
-  margin: 6rem 0;
+  margin: 5rem 0;
   transition: 300ms all ease-in-out;
-  height: 25rem; /* Definir una altura fija para el contenedor */
-  width: 70%;
+  height: 28rem; /* Definir una altura fija para el contenedor */
+  width: 75%;
   gap: 2px;
-
+  
   /* Style 1 */
   &.style-1 {
     display: flex;
     flex-direction: row;
 
-    & .project-img {
-      width: 30%;
-      border-radius: 15px 0 0 15px;
+  
+    & .project-image-container {
+      flex-basis: 35%; /* Define the initial width of the image container */
+      border-radius:  15px 0 0 15px ;
       border: 1px solid var(--color-primary-100);
+      position: relative;
+      overflow: hidden;
+  
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
-
+  
     .project-content {
+      flex-basis: 65%; /* Define the initial width of the content container */
       box-sizing: border-box;
-      height: 100%;
       display: flex;
-      flex-grow: 1;
       flex-direction: column;
       overflow: hidden;
       border-radius: 0 15px 15px 0;
       border: 1px solid var(--color-primary-100);
-
+  
       & .project-title {
         color: var(--accent-color);
         display: flex;
@@ -428,40 +437,38 @@ nav {
         align-items: center;
         padding: 1rem 2rem;
         border-bottom: 5px solid var(--color-primary-100);
-
+  
         & .technologies {
           display: flex;
           margin: 1rem 0;
-          justify-content: space-around;
+          justify-content: flex-end;
           width: 30%;
-
-
-          & img{
+          gap: 10px;
+  
+          & img {
             width: 20%;
             border: none;
           }
-
         }
       }
-
+  
       & .project-body {
         display: flex;
         flex-direction: column;
-        height: 100%; /* Asegura que ocupe toda la altura del contenedor padre */
+        flex-grow: 1; /* Use flex-grow to occupy the remaining space */
         overflow: hidden;
-
+  
         & .project-text {
-          height: 70%; /* Define que ocupe el 80% de la altura del contenedor padre */
+          flex-grow: 1; /* Use flex-grow to occupy the remaining space */
           margin-top: 1rem;
           padding: 1rem 2rem;
           overflow-y: auto; /* Permite el scroll si el contenido excede */
         }
-
+  
         & .project-footer {
-          height: 30%; /* Define que ocupe el 20% de la altura del contenedor padre */
-          padding: 0 2rem;
+          padding: 1rem  2rem;
           display: flex;
-          justify-content: flex-end;
+          justify-content: flex-start;
           align-items: center;
           flex-shrink: 0; /* Evita que el footer se reduzca */
         }
@@ -475,23 +482,33 @@ nav {
   &.style-2 {
     display: flex;
     flex-direction: row-reverse;
-
-    & .project-img {
-      width: 100%;
-      border-radius: 0 15px 15px 0;
+  
+    & .project-image-container {
+      flex-basis: 35%; /* Define the initial width of the image container */
+      border-radius: 0 15px  15px 0;
       border: 1px solid var(--color-primary-100);
+      position: relative;
+      overflow: hidden;
+  
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
-
+  
     .project-content {
+      flex-basis: 65%; /* Define the initial width of the content container */
       box-sizing: border-box;
-      height: 100%;
       display: flex;
-      flex-grow: 1;
       flex-direction: column;
       overflow: hidden;
       border-radius: 15px 0 0 15px;
       border: 1px solid var(--color-primary-100);
-
+  
       & .project-title {
         color: var(--accent-color);
         display: flex;
@@ -500,38 +517,35 @@ nav {
         align-items: center;
         padding: 1rem 2rem;
         border-bottom: 5px solid var(--color-primary-100);
-
+  
         & .technologies {
           display: flex;
           margin: 1rem 0;
           justify-content: flex-end;
           width: 30%;
-
-
-          & img{
+  
+          & img {
             width: 20%;
             border: none;
           }
-
         }
       }
-
+  
       & .project-body {
         display: flex;
         flex-direction: column;
-        height: 100%; /* Asegura que ocupe toda la altura del contenedor padre */
+        flex-grow: 1; /* Use flex-grow to occupy the remaining space */
         overflow: hidden;
-
+  
         & .project-text {
-          height: 60%; /* Define que ocupe el 80% de la altura del contenedor padre */
+          flex-grow: 1; /* Use flex-grow to occupy the remaining space */
           margin-top: 1rem;
           padding: 1rem 2rem;
           overflow-y: auto; /* Permite el scroll si el contenido excede */
         }
-
+  
         & .project-footer {
-          height: 40%; /* Define que ocupe el 20% de la altura del contenedor padre */
-          padding: 0 2rem;
+          padding: .5rem  2rem;
           display: flex;
           justify-content: flex-start;
           align-items: center;
@@ -731,8 +745,7 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
-
-  .mobile-hidden{
+  .mobile-hidden {
     display: none;
     opacity: 0;
   }
@@ -776,8 +789,8 @@ nav {
     text-align: center;
   }
 
-  .btn{
-    &.mobile-full{
+  .btn {
+    &.mobile-full {
       display: block;
       width: 100%;
     }
@@ -835,8 +848,6 @@ nav {
   .nav-toggler.opened .bar:nth-child(3) {
     transform: rotate(135deg) translate(-5px, 5px);
   }
-
-
 
   nav {
     padding: 0;
@@ -901,7 +912,6 @@ nav {
     padding: 1rem 0;
     margin: 0;
     opacity: 0;
-    
 
     transition: opacity 600ms ease-in-out;
   }
@@ -950,56 +960,51 @@ nav {
     font-size: 20px;
   }
 
-
-
   /* Navbar Configs */
-  
-  
+
   /* HOME SECTION */
-  
+
   .home-elements {
     width: 100%;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-  
+
     z-index: 1;
-  
+
     & .home-feature-location {
       width: 100%;
     }
 
-    & h1{
+    & h1 {
       text-align: center;
     }
-  
+
     & img {
       width: 80%;
       z-index: 1;
-  
+
       animation: float 5s ease-in-out infinite;
     }
   }
-  
+
   /* HOME SECTION */
-  
-  
-  
+
   /* ABOUT SECTION */
-  
-  #About{
+
+  #About {
     text-align: justify;
   }
 
-  .about-title{
+  .about-title {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
-    & h1{
+    & h1 {
       font-size: 30px;
     }
   }
@@ -1007,119 +1012,119 @@ nav {
   #aboutCodeIcon {
     font-size: 50px;
   }
-  
+
   .techStack-item {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-  
+
     padding: 1rem;
-  
+
     transition: 200ms all ease-in-out;
-  
-    & img{
+
+    & img {
       width: 40%;
       object-fit: cover;
     }
-  
   }
 
   /* ABOUT SECTION */
 
-
-
   /* PROJECTS PAGE */
 
-.project {
-  margin: 6rem 0;
-  transition: 300ms all ease-in-out;
-  height: 55rem; /* Definir una altura fija para el contenedor */
-  width: 100%;
-  gap: 2px;
+  .project {
+    margin: 6rem 0;
+    transition: 300ms all ease-in-out;
+    height: 45rem; /* Definir una altura fija para el contenedor */
+    width: 100%;
+    gap: 2px;
 
-  /* Mobile Style */
-  &.mobile-style {
-    display: flex;
-    flex-direction: column;
-
-    & .project-img {
-      width: 100%;
-      border-radius: 15px  15px 0 0;
-      border: 1px solid var(--color-primary-100);
-    }
-
-    .project-content {
-      box-sizing: border-box;
-      height: 100%;
+    /* Mobile Style */
+    &.mobile-style {
       display: flex;
-      flex-grow: 1;
       flex-direction: column;
-      overflow: hidden;
-      border-radius: 0 0 15px 15px ;
-      border: 1px solid var(--color-primary-100);
-      
 
-      & .project-title {
-        color: var(--accent-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 5px solid var(--color-primary-100);
+      & .project-image-container {
 
-        & h1{
-          font-size: 24px;
-        }
+        width: 100%;
+        border-radius: 10px 10px 0 0 ; 
+        position: relative;
+        overflow: hidden;
+        border-bottom: 2.5px solid var(--color-primary-100) !important;
 
-        & .technologies {
-          display: flex;
-          margin: 1rem 0;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
+        & img {
           width: 100%;
-
-          &img{
-            width: 20%;
-            border: none;
-          }
+          object-fit: cover; 
 
         }
       }
 
-      & .project-body {
+      .project-content {
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        height: 100%;
         overflow: hidden;
-        
+        border-radius: 0 0 15px 15px;
 
-        & .project-text {
-          width: 100%;
-          padding: 1rem !important;
-          overflow-y: auto;
 
-          & p{
-            text-align: justify !important;
+        & .project-title {
+          color: var(--accent-color);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 5px solid var(--color-primary-100) !important;
+
+
+          & h1 {
+            font-size: 24px;
+          }
+
+          & .technologies {
+            display: flex;
+            margin: 1rem 0;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+
+            & img {
+              width: 15%;
+              border: none;
+            }
           }
         }
 
-        & .project-footer {
-          height: 30%;
+        & .project-body {
           display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          padding: 1.5rem 1rem;
+          flex-direction: column;
+          flex-basis: 75%;
+          height: 100%;
+          overflow: hidden;
 
+          & .project-text {
+            width: 100%;
+            padding: 1rem !important;
+            overflow-y: auto;
+
+            & p {
+              text-align: justify !important;
+            }
+          }
+
+          & .project-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem;
+          }
         }
       }
     }
+
+    /* Style 1 */
   }
 
-  /* Style 1 */
-}
-
-/* PROJECTS PAGE */
-
+  /* PROJECTS PAGE */
 }
