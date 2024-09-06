@@ -154,7 +154,13 @@ span {
   width: 100%;
   height: 2px;
   background-color: var(--color-primary-blur);
+
 }
+
+.line-mobile, .line-vertical-mobile{
+  display: none;
+}
+
 .line-vertical {
   width: 2px; /* Ajusta el ancho a tu preferencia */
   height: 80vh; /* Ocupa el 100% de la altura del viewport */
@@ -376,7 +382,7 @@ nav {
   transition: 200ms all ease-in-out;
 
   & img{
-    width: 25%;
+    width: 30%;
     object-fit: cover;
   }
 
@@ -398,7 +404,7 @@ nav {
     display: flex;
     flex-direction: row;
 
-    & img {
+    & .project-img {
       width: 30%;
       border-radius: 15px 0 0 15px;
       border: 1px solid var(--color-primary-100);
@@ -424,7 +430,17 @@ nav {
         border-bottom: 5px solid var(--color-primary-100);
 
         & .technologies {
-          font-size: 32px;
+          display: flex;
+          margin: 1rem 0;
+          justify-content: space-around;
+          width: 30%;
+
+
+          & img{
+            width: 20%;
+            border: none;
+          }
+
         }
       }
 
@@ -460,7 +476,7 @@ nav {
     display: flex;
     flex-direction: row-reverse;
 
-    & img {
+    & .project-img {
       width: 100%;
       border-radius: 0 15px 15px 0;
       border: 1px solid var(--color-primary-100);
@@ -486,7 +502,17 @@ nav {
         border-bottom: 5px solid var(--color-primary-100);
 
         & .technologies {
-          font-size: 30px;
+          display: flex;
+          margin: 1rem 0;
+          justify-content: flex-end;
+          width: 30%;
+
+
+          & img{
+            width: 20%;
+            border: none;
+          }
+
         }
       }
 
@@ -757,6 +783,19 @@ nav {
     }
   }
 
+  .line-mobile {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary-blur);
+  }
+
+  .line-vertical-mobile {
+    width: 2px; /* Ajusta el ancho a tu preferencia */
+    height: 100vh; /* Ocupa el 100% de la altura del viewport */
+    background-color: var(--color-primary-blur);
+  }
+
   #colorSchemeSwitcher {
     display: none;
     opacity: 0;
@@ -837,8 +876,8 @@ nav {
 
     background-color: var(----glassmorphism-color);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .nav-menu.opened {
@@ -980,7 +1019,7 @@ nav {
     transition: 200ms all ease-in-out;
   
     & img{
-      width: 25%;
+      width: 40%;
       object-fit: cover;
     }
   
@@ -988,5 +1027,99 @@ nav {
 
   /* ABOUT SECTION */
 
+
+
+  /* PROJECTS PAGE */
+
+.project {
+  margin: 6rem 0;
+  transition: 300ms all ease-in-out;
+  height: 55rem; /* Definir una altura fija para el contenedor */
+  width: 100%;
+  gap: 2px;
+
+  /* Mobile Style */
+  &.mobile-style {
+    display: flex;
+    flex-direction: column;
+
+    & .project-img {
+      width: 100%;
+      border-radius: 15px  15px 0 0;
+      border: 1px solid var(--color-primary-100);
+    }
+
+    .project-content {
+      box-sizing: border-box;
+      height: 100%;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 0 0 15px 15px ;
+      border: 1px solid var(--color-primary-100);
+      
+
+      & .project-title {
+        color: var(--accent-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 5px solid var(--color-primary-100);
+
+        & h1{
+          font-size: 24px;
+        }
+
+        & .technologies {
+          display: flex;
+          margin: 1rem 0;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          width: 100%;
+
+          &img{
+            width: 20%;
+            border: none;
+          }
+
+        }
+      }
+
+      & .project-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        
+
+        & .project-text {
+          width: 100%;
+          padding: 1rem !important;
+          overflow-y: auto;
+
+          & p{
+            text-align: justify !important;
+          }
+        }
+
+        & .project-footer {
+          height: 30%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding: 1.5rem 1rem;
+
+        }
+      }
+    }
+  }
+
+  /* Style 1 */
+}
+
+/* PROJECTS PAGE */
 
 }
