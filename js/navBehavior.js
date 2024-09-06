@@ -193,6 +193,6 @@ navToggler.addEventListener("click", () => {
       navMenu.classList.add("closing");
       navMenu.classList.remove("opened");
       navToggler.classList.remove("opened");
-    }, menuItems.length * 100 + 100); // Espera a que todos los <li> se oculten antes de cerrar
+    }, menuItems.length * 100); // Espera a que todos los <li> se oculten antes de cerrar
   }
 });
