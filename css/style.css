@@ -383,6 +383,14 @@ nav {
     width: 30%;
     object-fit: cover;
   }
+
+  &.techstack-mastering-item{
+    & img{
+      transform: translateY(0px);
+      animation: float 5s ease-in-out infinite;
+      width: 45%;
+    }
+  }
 }
 
 /* ABOUT PAGE */
@@ -679,6 +687,7 @@ nav {
     justify-self: center;
     align-items: flex-end;
     top: 0px;
+    padding:  1rem;
 
     & img {
       width: 100%;
@@ -1033,6 +1042,14 @@ nav {
     & img {
       width: 40%;
       object-fit: cover;
+    }
+
+    &.techstack-mastering-item{
+      & img{
+        transform: translateY(0px);
+        animation: float 4s ease-in-out infinite;
+        width: 40%;
+      }
     }
   }
 
