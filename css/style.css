@@ -652,12 +652,12 @@ nav {
 .contact-form-single-element-row {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 20px 0;
 }
 .contact-form-two-element-row {
   display: flex;
   gap: 20px;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .form-input {
@@ -1073,7 +1073,7 @@ nav {
   /* PROJECTS PAGE */
 
   .project {
-    margin: 6rem 0;
+    margin: 2.5rem 0;
     transition: 300ms all ease-in-out;
     height: 45rem; /* Definir una altura fija para el contenedor */
     width: 100%;
@@ -1244,13 +1244,13 @@ nav {
 .contact-form-single-element-row {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 20px 0;
 }
 .contact-form-two-element-row {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .form-input {
