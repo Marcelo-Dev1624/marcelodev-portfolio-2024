@@ -189,6 +189,7 @@ span {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(100, 100, 100, 0.4);
+
 }
 
 .feature-box {
@@ -239,7 +240,7 @@ nav {
   width: 100%;
   height: 6.25rem;
 
-  z-index: 200;
+  z-index: 9999;
 
   padding: 1.2rem;
 }
@@ -365,17 +366,49 @@ nav {
 
 /* ABOUT PAGE */
 
-#About {
-  z-index: 1;
+#About{
+  min-height: 75vh;
+}
+
+.about-elements {
+  z-index: 1000;
+  display: flex;
+  width: 85%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  border-radius: 25px;
+  border: 1px solid var(--color-primary-100);
+  animation: float 5s ease-in-out infinite;
+  
+  & .about-image{
+    width: 30%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-right:5px solid var(--color-primary-100);
+    
+    & img{
+      border-radius: 25px 0 0 25px;
+      width: 100%;
+    }
+  }
+
+  & .about-body{
+    width: 70%;
+    padding: 20px;
+  }
 }
 
 #aboutCodeIcon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
+  font-size: 70px;
   transform: translateY(0px);
-  animation: float 5s ease-in-out infinite;
+  
 }
 
 .techStack-item {
@@ -840,6 +873,17 @@ nav {
     background-color: var(--color-primary-blur);
   }
 
+  .glassmorphism{
+
+    &.hidden-on-mobile{
+    background-color:transparent;
+    box-shadow:none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter:none;
+      border: none;
+    }
+  }
+
   #colorSchemeSwitcher {
     display: none;
     opacity: 0;
@@ -1003,6 +1047,7 @@ nav {
     justify-content: center;
 
     z-index: 1;
+    
 
     & .home-feature-location {
       width: 100%;
@@ -1015,7 +1060,6 @@ nav {
     & img {
       width: 80%;
       z-index: 1;
-
       animation: float 5s ease-in-out infinite;
     }
   }
@@ -1024,24 +1068,49 @@ nav {
 
   /* ABOUT SECTION */
 
-  #About {
-    text-align: justify;
+  #About{
+    min-height: 75vh;
   }
-
-  .about-title {
+  
+  .about-elements {
     display: flex;
-    flex-direction: column-reverse;
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    text-align: justify;
+    border-radius: 25px;
+    animation: none !important;
+    
+    & .about-image{
+      display: none;
+      justify-content: center;
+      align-items: center;
+      border-bottom:5px solid var(--color-primary-100) !important;
+      border-right: none !important;
+      overflow: hidden;
+      
+      & img{
+        border-radius: 0 0 0 0 ;
+        width: 100%;
+      }
+    }
+  
+    & .about-body{
+      width: 100%;
+      padding: 20px;
 
-    & h1 {
-      font-size: 30px;
+      & .about-title{
+        display: inline-flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+      }
     }
   }
 
   #aboutCodeIcon {
     font-size: 50px;
+    animation: float 5s ease-in-out infinite;
   }
 
   .techStack-item {
