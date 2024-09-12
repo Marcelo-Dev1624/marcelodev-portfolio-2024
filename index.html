@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-mode">
+<html lang="en" class="dark-mode onload ">
 
 <head>
     <meta charset="UTF-8">
@@ -30,7 +30,10 @@
 
 <body class="dark-mode overflow-x-hidden">
 
-
+    <span id="onload-animation" class="">
+        <img src="images/isotipo-verde.png" id="animation-logo-green" class="" alt="">
+        <img src="images/isotipo_blanco.png" id="animation-logo-white" class="" alt="">
+    </span>
 
     <nav class="">
         <i id="colorSchemeSwitcher" class="fa-solid hidden fa-sun glassmorphism accent"></i>
@@ -66,7 +69,7 @@
     </nav>
 
     <div class="sections-mv-container">
-        <section class="section animation-hidden" id="Home">
+        <section class="section elements-animation-hidden" id="Home">
 
 
             <div class="home-elements lg:mt-16">
@@ -107,7 +110,7 @@
 
 
 
-        <section class="section animation-hidden" id="About">
+        <section class="section elements-animation-hidden" id="About">
 
             <div class="about-elements glassmorphism hidden-on-mobile">
                 <div class="about-image">
@@ -143,7 +146,7 @@
                             their vision and purpose.
                         </p>
     
-                        <a id="btnToContactPage" href="/contact.html#Contact"
+                        <a id="btnToContactPage" href="contact.html#Contact"
                             class="btn  glassmorphism mv-h3 accent mobile-full">Contact
                             Me</a>
     
@@ -157,7 +160,7 @@
 
         </section>
 
-        <section id="#Skills" class="section animation-hidden">
+        <section id="#Skills" class="section elements-animation-hidden">
             <div class="px-6 mt-12 md:px-16 lg:px-24 xl:px-60 xl:py-2 xl:mt-0 text-center">
                 <h1 class="header-text-3 accent">My Skills</h1>
                 <div class="line my-6"></div>
@@ -210,7 +213,7 @@
 
                             <div
                                 class="grid-cols-subgrid col-span-3  sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
-                                <div class="techStack-item techstack-mastering-item ">
+                                <div class="techStack-item techstack-mastering-item  ">
                                     <img src="images/technologies/react.png" alt="">
                                 </div>
                             </div>
@@ -226,9 +229,9 @@
 
 
 
-        <section class="section animation-hidden px-4 xl:pt-40 flex-col justify-center items-center" id="Projects">
+        <section class="section elements-animation-hidden px-4 pt-24 xl:pt-24 flex-col justify-center items-center" id="Projects">
 
-            <h1 class="header-text-2 mt-20 lg:mt-0 xl:mt-0 accent">¡Take a look at my work!</h1>
+            <h1 class="header-text-2  accent">¡Take a look at my work!</h1>
 
             <div class="project mobile-style style-1">
                 <div class="project-image-container glassmorphism">
@@ -364,12 +367,10 @@
     <script src="https://kit.fontawesome.com/0003ddee2d.js" crossorigin="anonymous"></script>
     <script src="js/navBehavior.js"></script>
     <script src="js/triggerBtn.js"></script>
-    <script src="js/colorSchemeSwitch.js"></script>
+    
     <script src="js/animationObserver.js"></script>
 
-
-
-
+    <script src="js/loadingAnimation.js"></script>
 
 
 </body>

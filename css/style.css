@@ -73,21 +73,134 @@
     opacity: 0;
   }
 
-  .animation-hidden{
+  .elements-animation-hidden{
     opacity: 0;
     transition: all 500ms ease-in-out;
   }
 
-  .animation-show{
+  .elements-animation-show{
     opacity: 1; 
   }
 }
+
+/*
+ON LOAD ANIMATIONS
+*/
+
+#onload-animation{
+  
+  display: block;
+  
+  position: fixed;
+  background: var(--color-primary-100);
+  z-index:9999999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  overflow-y: hidden;
+
+  
+  transition: all 1000ms ease-out;
+
+
+  &.onload{
+    height: 0%;
+    top: -10px;
+    overflow-y: hidden;
+  }
+
+}
+
+@keyframes openLoadAnimation {
+  0%{
+    height: 100%;
+  }
+
+  
+  
+  100%{
+    height: 0%;
+  }
+}
+
+#animation-logo-white {
+  position: absolute;
+  display: block;
+  width: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+
+  &.fadeIn {
+    opacity: 1;
+    animation: fadeIn 300ms ease-in-out opacity;
+  }
+
+  &.fadeOut {
+    opacity: 0;
+    animation: fadeOut 300ms ease-in-out opacity;
+  }
+}
+#animation-logo-green {
+  position: absolute;
+  display: block;
+  width: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+
+  &.fadeIn {
+    opacity: 1;
+    animation: fadeIn 300ms ease-in-out opacity;
+  }
+
+  &.fadeOut {
+    opacity: 0;
+    animation: fadeOut 300ms ease-in-out opacity;
+  }
+}
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /*
+  ON LOAD ANIMATIONS
+  */
+
+
 
 html.dark-mode {
   scroll-behavior: smooth;
   scrollbar-color: var(--accent-color) transparent;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
+  scrollbar-width: thin;
+  
 }
 
 html.light-mode {
@@ -110,6 +223,10 @@ body {
   color: var(--color-secondary-100);
 
   transition: all 300ms ease-in-out;
+}
+
+html.onload{
+  overflow-y: hidden;
 }
 
 span {
@@ -809,6 +926,10 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
+  #animation-logo-white, #animation-logo-green{
+    width: 40%;
+  }
+
   .mobile-hidden {
     display: none;
     opacity: 0;
@@ -1129,10 +1250,13 @@ nav {
     }
 
     &.techstack-mastering-item{
+      
+
       & img{
         transform: translateY(0px);
         animation: float 4s ease-in-out infinite;
         width: 40%;
+
       }
     }
   }

@@ -1,0 +1,4 @@
+Idea for a load animation:
+
+Fade in the logo on white, then turn it to the accent color, and separate one brace, from the M and the other brace, to create kind of a gate effect
+
