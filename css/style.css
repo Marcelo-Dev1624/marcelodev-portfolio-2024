@@ -90,12 +90,11 @@ ON LOAD ANIMATIONS
 #onload-animation{
   
   display: block;
-  
+
   position: fixed;
   background: var(--color-primary-100);
   z-index:9999999;
-  top: 0;
-  left: 0;
+
   height: 100%;
   width: 100%;
   content: '';
@@ -105,10 +104,28 @@ ON LOAD ANIMATIONS
   transition: all 1000ms ease-out;
 
 
+
   &.onload{
     height: 0%;
     top: -10px;
     overflow-y: hidden;
+  }
+
+  & h1{
+
+    transition: 300ms opacity ease-in-out;
+    opacity: 0;
+
+    &.fadeIn {
+      opacity: 1;
+      animation: fadeIn 300ms ease-in-out opacity;
+    }
+  
+    &.fadeOut {
+      opacity: 0;
+      animation: fadeOut 300ms ease-in-out opacity;
+    }
+
   }
 
 }
@@ -118,20 +135,18 @@ ON LOAD ANIMATIONS
     height: 100%;
   }
 
-  
-  
   100%{
     height: 0%;
   }
 }
 
 #animation-logo-white {
-  position: absolute;
   display: block;
-  width: 15%;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 15%;
   content: '';
   opacity: 0;
   transition: opacity 400ms ease-in-out;
@@ -147,12 +162,13 @@ ON LOAD ANIMATIONS
   }
 }
 #animation-logo-green {
-  position: absolute;
   display: block;
   width: 15%;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   content: '';
   opacity: 0;
   transition: opacity 400ms ease-in-out;
@@ -927,7 +943,7 @@ nav {
 
 @media only screen and (max-width: 767px) {
   #animation-logo-white, #animation-logo-green{
-    width: 40%;
+    width: 30%;
   }
 
   .mobile-hidden {
