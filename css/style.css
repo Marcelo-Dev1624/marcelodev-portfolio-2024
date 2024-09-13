@@ -942,6 +942,10 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
+  html.loading{
+    overflow-y: hidden;
+  }
+  
   #onload-animation{
   overflow: hidden;
   z-index: 999999;
