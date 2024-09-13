@@ -942,8 +942,15 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
+  #onload-animation{
+  overflow: hidden;
+  z-index: 999999;
+  
+  }
+
   #animation-logo-white, #animation-logo-green{
     width: 30%;
+    z-index: 9999999;
   }
 
   .mobile-hidden {
