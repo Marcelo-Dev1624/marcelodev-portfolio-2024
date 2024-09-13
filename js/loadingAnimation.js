@@ -21,7 +21,7 @@ window.addEventListener("load", () => {
     animationLogoGreen.classList.add("fadeOut");
     //animationText.classList.add("fadeOut");
     setTimeout(() => {
-      loadAnimation.classList.add("onload");
+      loadAnimation.classList.remove("loading");
     }, 500);
   }, 3500);
   

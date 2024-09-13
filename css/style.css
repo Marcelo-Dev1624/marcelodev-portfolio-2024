@@ -241,7 +241,7 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-html.onload{
+html.loading{
   overflow-y: hidden;
 }
 
