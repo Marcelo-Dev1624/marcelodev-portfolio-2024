@@ -108,7 +108,7 @@ ON LOAD ANIMATIONS
   &.onload{
     height: 0%;
     top: -10px;
-    overflow-y: hidden;
+    overflow-y: hidden !important;
   }
 
   & h1{
@@ -204,11 +204,16 @@ ON LOAD ANIMATIONS
     }
   }
 
+ 
+
   /*
   ON LOAD ANIMATIONS
   */
 
-
+  html.loading{
+    overflow-y: hidden !important;
+  }
+  
 
 html.dark-mode {
   scroll-behavior: smooth;
@@ -241,9 +246,6 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-html.loading{
-  overflow-y: hidden;
-}
 
 span {
   transition: all 300ms ease-in-out;
@@ -943,18 +945,16 @@ nav {
 
 @media only screen and (max-width: 767px) {
   html.loading{
-    overflow-y: hidden;
+    overflow: hidden;
+    min-height: 100vh;
   }
   
   #onload-animation{
   overflow: hidden;
-  z-index: 999999;
-  
   }
 
   #animation-logo-white, #animation-logo-green{
     width: 30%;
-    z-index: 9999999;
   }
 
   .mobile-hidden {
