@@ -42,12 +42,24 @@ window.addEventListener("load", updateActiveIndicator);
 // Add event listener to menu items
 menuItems.forEach((menuItem) => {
   menuItem.addEventListener("click", () => {
+    
+    // Eliminar clase 'show' de todos los elementos poco a poco
+    const menuItems_li = document.querySelectorAll(".nav-menu .menu li");
+    menuItems_li.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.remove("show");
+      }, index * 100); // Eliminar gradualmente con 100ms de retraso entre cada elemento
+    });
+
     // Remove active class from all menu items
     menuItems.forEach((item) => item.classList.remove("active"));
+
     // Add active class to the clicked menu item
     menuItem.classList.add("active");
+    
     // Update the active indicator position
     updateActiveIndicator();
+    
     // Store the active section's ID in local storage
     localStorage.setItem("activeSectionId", menuItem.dataset.sectionId);
 
@@ -63,8 +75,8 @@ menuItems.forEach((menuItem) => {
 
     if (window.matchMedia("(max-width: 768px)").matches) {
       if (!navMenu.classList.contains("closing")) {
-        navMenu.classList.add("closing");
         navMenu.classList.remove("opened");
+        navMenu.classList.add("closing");
         navToggler.classList.remove("opened");
       }
       setTimeout(() => {
@@ -73,6 +85,7 @@ menuItems.forEach((menuItem) => {
     }
   });
 });
+
 
 // Add event listener to window scroll event
 window.addEventListener("scroll", () => {
@@ -101,8 +114,9 @@ function updateActiveLinkAndIndicator() {
   sections.forEach((section) => {
     // Define section bounds
     const sectionTop = section.offsetTop - window.innerHeight / 2; // Adjusted to account for viewport height
-    const sectionBottom = section.offsetTop + section.offsetHeight - window.innerHeight / 2;
-    
+    const sectionBottom =
+      section.offsetTop + section.offsetHeight - window.innerHeight / 2;
+
     if (
       currentScrollPosition >= sectionTop &&
       currentScrollPosition < sectionBottom
@@ -140,10 +154,8 @@ window.addEventListener("resize", updateActiveLinkAndIndicator);
 // Optionally, run this on page load to set the active section initially
 document.addEventListener("DOMContentLoaded", updateActiveLinkAndIndicator);
 
-
 // Update active indicator
 function updateActiveIndicator() {
-  
   console.log("updateActiveIndicator called");
   // Get the active section's ID from local storage
   const activeMenuItem = document.querySelector(".menu-item.active");
@@ -164,7 +176,7 @@ function updateActiveIndicator() {
 }
 
 navToggler.addEventListener("click", () => {
-  const menuItems = document.querySelectorAll(".nav-menu .menu li");
+  const menuItems_li = document.querySelectorAll(".nav-menu .menu li");
 
   if (!navMenu.classList.contains("opened")) {
     // Abrir el menú
@@ -173,19 +185,18 @@ navToggler.addEventListener("click", () => {
     navMenu.classList.remove("closing");
 
     // Mostrar los elementos <li> con un retraso (del primero al último)
-    menuItems.forEach((item, index) => {
+    menuItems_li.forEach((item, index) => {
       setTimeout(() => {
         item.classList.add("show");
       }, index * 100); // 100ms de retraso entre cada elemento
     });
-
   } else {
     // Cerrar el menú
     // Ocultar los elementos <li> de forma invertida (del último al primero)
-    menuItems.forEach((item, index) => {
+    menuItems_li.forEach((item, index) => {
       setTimeout(() => {
         item.classList.remove("show");
-      }, (index * 100)); // 100ms de retraso entre cada elemento (invertido)
+      }, index + 1 * 100);
     });
 
     // Aplicar la clase .closing después de que los <li> se oculten
@@ -193,6 +204,6 @@ navToggler.addEventListener("click", () => {
       navMenu.classList.add("closing");
       navMenu.classList.remove("opened");
       navToggler.classList.remove("opened");
-    }, menuItems.length * 100); // Espera a que todos los <li> se oculten antes de cerrar
+    }, menuItems_li.length * 100); // Espera a que todos los <li> se oculten antes de cerrar
   }
 });

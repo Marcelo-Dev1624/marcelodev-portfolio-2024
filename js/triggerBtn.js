@@ -1,5 +1,5 @@
 
-const aboutBtnToContact = document.getElementById('btnToContact');
+const aboutBtnToContact = document.getElementById('btnToContactPage');
 const navLogo = document.getElementById('navLogo');
 
 aboutBtnToContact.addEventListener('click', () => {

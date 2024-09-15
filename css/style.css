@@ -1179,7 +1179,7 @@ nav {
     width: fit-content;
     align-items: center;
     text-align: center;
-    padding: 0 1.5rem; /* Ajusta el padding si es necesario */
+    margin-left: 1.5rem;
     font-size: 20px;
   }
 
