@@ -51,11 +51,7 @@ menuItems.forEach((menuItem) => {
       }, index * 100); // Eliminar gradualmente con 100ms de retraso entre cada elemento
     });
 
-    // Remove active class from all menu items
-    menuItems.forEach((item) => item.classList.remove("active"));
-
-    // Add active class to the clicked menu item
-    menuItem.classList.add("active");
+    
     
     // Update the active indicator position
     updateActiveIndicator();

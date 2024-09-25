@@ -22,8 +22,9 @@ window.addEventListener("load", () => {
     //animationText.classList.add("fadeOut");
     setTimeout(() => {
       loadAnimation.classList.add("onload");
+      loadAnimation.classList.add("glassmorphism");
       html.classList.remove('loading')
-    }, 500);
+    }, 1000);
   }, 3500);
   
 });

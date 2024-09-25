@@ -109,6 +109,8 @@ ON LOAD ANIMATIONS
     height: 0%;
     top: -10px;
     overflow-y: hidden !important;
+    background-color: transparent;
+    border: none !important;
   }
 
   & h1{
@@ -488,6 +490,8 @@ nav {
 
   & .home-feature-location {
     width: 75%;
+    border: 2px solid var(--accent-color);
+    border-radius: 100px;
   }
 
   & img {
