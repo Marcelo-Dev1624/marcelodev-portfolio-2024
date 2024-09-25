@@ -488,6 +488,8 @@ nav {
 
   & .home-feature-location {
     width: 75%;
+    border-radius: 100px;
+    border: 2px solid var(--accent-color);
   }
 
   & img {
