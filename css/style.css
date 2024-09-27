@@ -360,6 +360,21 @@ span {
     background-color: var(--accent-color) !important;
     color: var(--color-primary-100) !important;
   }
+
+  &.rounded{
+    border-radius: 30px;
+
+  }
+
+  &.outlined-primary{
+    border: 2px solid var(--color-primary-100);
+  }
+  &.outlined-secondary{
+    border: 2px solid var(--color-secondary-100);
+  }
+  &.outlined-accent{
+    border: 2px solid var(--accent-color);
+  }
 }
 
 /* GLOBAL STYLES */
@@ -575,6 +590,8 @@ nav {
 /* ABOUT PAGE */
 
 /* PROJECTS PAGE */
+
+
 
 .project {
   margin: 5rem 0;
