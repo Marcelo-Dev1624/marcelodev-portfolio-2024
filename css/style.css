@@ -605,6 +605,8 @@ nav {
   width: 75%;
   gap: 2px;
 
+  
+
   /* Style 1 */
   &.style-1 {
     display: flex;
@@ -685,9 +687,11 @@ nav {
         & .project-footer {
           padding: 1rem 2rem;
           display: flex;
-          justify-content: flex-start;
+          justify-content: flex-end;
           align-items: center;
           flex-shrink: 0; /* Evita que el footer se reduzca */
+
+          
         }
       }
     }
