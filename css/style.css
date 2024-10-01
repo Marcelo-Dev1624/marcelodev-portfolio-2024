@@ -140,6 +140,7 @@ ON LOAD ANIMATIONS
     opacity: 0;
   }
 }
+
 #animation-logo-white {
   display: block;
   position: absolute;
@@ -147,22 +148,26 @@ ON LOAD ANIMATIONS
   left: 50%;
   transform: translate(-50%, -50%);
   width: 15%;
-  content: '';
   opacity: 0;
   transition: opacity 400ms ease-in-out;
   -webkit-transition: opacity 400ms ease-in-out;
 
-  &.fadeIn {
-    opacity: 1;
-    animation: fadeIn 300ms ease-in-out;
-    -webkit-animation: fadeIn 300ms ease-in-out;
-  }
 
-  &.fadeOut {
-    opacity: 0;
-    animation: fadeOut 300ms ease-in-out;
-    -webkit-animation: fadeOut 300ms ease-in-out;
-  }
+ &.fadeIn {
+  opacity: 1;
+  animation: fadeIn 300ms ease-in-out;
+  -webkit-animation: fadeIn 300ms ease-in-out;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+
+&.fadeOut {
+  opacity: 0;
+  animation: fadeOut 300ms ease-in-out;
+  -webkit-animation: fadeOut 300ms ease-in-out;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
 }
 
 #animation-logo-green {
@@ -172,7 +177,6 @@ ON LOAD ANIMATIONS
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  content: '';
   opacity: 0;
   transition: opacity 400ms ease-in-out;
   -webkit-transition: opacity 400ms ease-in-out;
@@ -181,12 +185,16 @@ ON LOAD ANIMATIONS
     opacity: 1;
     animation: fadeIn 300ms ease-in-out;
     -webkit-animation: fadeIn 300ms ease-in-out;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
   }
-
+  
   &.fadeOut {
     opacity: 0;
     animation: fadeOut 300ms ease-in-out;
     -webkit-animation: fadeOut 300ms ease-in-out;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
   }
 }
 
