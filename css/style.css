@@ -29,10 +29,10 @@
     --color-secondary-100: #e5e5e5;
 
     ----glassmorphism-color: rgba(168, 168, 168, 0.3);
-    --accent-color: #56ffab;
+    --accent-color: #4de297;
     --accent-color-blur: rgba(128, 255, 194, 0.2);
 
-    --color-disabled:#979797;
+    --color-disabled: #979797;
   }
 
   .light-mode {
@@ -385,7 +385,7 @@ span {
     border: 2px solid var(--color-disabled) !important;
     color: var(--color-disabled) !important;
 
-    &:hover{
+    &:hover {
       background-color: transparent !important;
     }
   }
@@ -592,6 +592,7 @@ nav {
     }
   }
 }
+
 
 #aboutCodeIcon {
   display: inline-flex;
@@ -1291,35 +1292,48 @@ nav {
   /* ABOUT SECTION */
 
   #About {
-    min-height: 75vh;
+    min-height: 100vh;
   }
 
   .about-elements {
-    flex-direction: column; /* Stack elements vertically */
-    height: auto; /* Allow height to adjust based on content */
-    width: 100%; /* Set width to 100% */
-    background-color: transparent; /* Maintain background color as transparent */
-  }
+    display: flex; /* Asegúrate de que el contenedor sea un flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    height: 75vh; /* Altura ajustable según el contenido */
+    width: 100%; /* Ancho al 100% */
+    background-color: transparent; /* Mantiene el fondo transparente */
+    justify-content: center;
+    align-items: center;
 
-  .about-image {
-    display: none; /* Hide the image container */
-  }
+    .about-image {
+        display: block; /* Muestra el contenedor de la imagen */
+        flex-basis: 30%; /* Toma el 30% del espacio disponible */
+        width: 50%; /* Ancho al 50% */
+        border-radius: 50%; /* Bordes redondeados */
+        border: 2.5px solid var(--accent-color); /* Borde con color de acento */
 
-  .about-body {
-    flex-basis: 100%; /* Full width for the content */
-    padding: 0; /* Set padding to 0 */
-    width: 100%; /* Ensure the body takes full width */
-
-    & .about-title {
-      border-bottom: 5px solid transparent !important;
-      flex-direction: column-reverse !important; /* Keep as is */
-
-      & #aboutCodeIcon {
-        font-size: 38px;
-        animation: float 5s ease-in-out infinite;
-      }
+        img {
+            width: 100%; /* Imagen ocupa el 100% del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
     }
-  }
+}
+
+.about-body {
+    flex-basis: 70%; /* Toma el 70% del espacio disponible */
+    padding: 0; /* Sin espaciado interno */
+    width: 100%; /* Asegura que el cuerpo ocupe el ancho completo */
+
+    .about-title {
+        display: flex; /* Cambiado a flex para mejor control */
+        flex-direction: column-reverse; /* Orden inverso de los elementos */
+        border-bottom: 5px solid transparent !important; /* Borde inferior transparente */
+
+        #aboutCodeIcon {
+            font-size: 38px; /* Tamaño del icono */
+            display: none; /* Oculta el icono */
+        }
+    }
+}
 
   .techStack-item {
     display: inline-flex;
@@ -1888,51 +1902,57 @@ nav {
   }
 
   .about-elements {
-    display: flex;
-    width: 85%;
-    height: 100%;
-    flex-direction: column;
+    display: flex; /* Asegúrate de que el contenedor sea un flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    height: 70vh; /* Altura ajustable según el contenido */
+    width: 100%; /* Ancho al 100% */
+    background-color: transparent; /* Mantiene el fondo transparente */
     justify-content: center;
     align-items: center;
-    text-align: justify;
-    border-radius: 25px;
-    animation: none !important;
-    background-color: transparent;
 
     & .about-image {
-      display: none;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 5px solid var(--color-primary-100) !important;
-      border-right: none !important;
-      overflow: hidden;
+        display: block; /* Muestra el contenedor de la imagen */
+        flex-basis: 70%; /* Toma el 70% del espacio disponible */
+        width: 50%; /* Ancho al 50% */
+        border-radius: 50%; /* Bordes redondeados */
+        border: 2.5px solid var(--accent-color); /* Borde con color de acento */
 
-      & img {
-        border-radius: 0 0 0 0;
-        width: 100%;
-      }
-    }
-
-    & .about-body {
-      width: 100%;
-      height: 100%;
-      padding: 20px;
-      border-radius: 0;
-
-      & .about-title {
-        display: inline-flex;
-        flex-direction: column-reverse;
-        gap: 20px;
-        width: 100%;
-        border-bottom: 5px solid transparent !important;
-
-        & #aboutCodeIcon {
-          font-size: 50px;
-          animation: float 5s ease-in-out infinite;
+        & img {
+            width: 100%; /* Imagen ocupa el 100% del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
         }
-      }
     }
-  }
+
+    .about-body {
+        width: 100%; /* Ancho al 100% */
+        height: 100%; /* Altura al 100% */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 0; /* Sin bordes redondeados */
+
+       & .about-title {
+            display: flex; /* Cambiado a flex para mejor control */
+            flex-direction: column-reverse; /* Orden inverso de los elementos */
+            gap: 20px; /* Espacio entre elementos */
+            width: 100%; /* Ancho al 100% */
+            border-bottom: 5px solid transparent !important; /* Borde inferior transparente */
+
+            #aboutCodeIcon {
+                font-size: 50px; /* Tamaño del icono */
+                display: none; /* Oculta el icono */
+            }
+        }
+
+        & .about-text {
+            flex-grow: 1; /* Ocupa el espacio restante */
+            margin-top: 1rem; /* Margen superior */
+            padding: 1rem 2rem; /* Espaciado interno */
+            
+            & .btn {
+                width: 30%; /* Ancho del botón */
+            }
+        }
+    }
+}
 
   .techStack-item {
     display: inline-flex;
