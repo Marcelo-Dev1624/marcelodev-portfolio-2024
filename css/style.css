@@ -1287,9 +1287,7 @@ nav {
 
   /* ABOUT SECTION */
 
-  #About {
-    min-height: 120vh;
-  }
+  
 
   .about-elements {
     display: flex; /* Asegúrate de que el contenedor sea un flexbox */
