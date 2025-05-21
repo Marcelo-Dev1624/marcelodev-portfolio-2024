@@ -25,6 +25,10 @@ window.addEventListener("load", () => {
       html.classList.remove('loading')
     }, 500);
   }, 3500);
+
+  setTimeout(() => {
+    loadAnimation.style.display = "none";
+  }, 5000);
   
 });
 
