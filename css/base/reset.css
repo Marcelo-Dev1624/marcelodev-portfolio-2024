@@ -1,0 +1,39 @@
+/* GLOBAL RESET AND BASE STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary-100);
+  font-family: var(--font-family-primary);
+  color: var(--color-secondary-100);
+  transition: var(--transition-normal);
+}
+
+span {
+  transition: var(--transition-normal);
+}
+
+/* HTML SCROLLING BEHAVIOR */
+html.loading {
+  overflow-y: hidden !important;
+}
+
+html.dark-mode {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--accent-color) transparent;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+html.light-mode {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--accent-color) transparent;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+} 

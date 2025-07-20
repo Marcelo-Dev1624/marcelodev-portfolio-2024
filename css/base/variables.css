@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* CSS CUSTOM PROPERTIES */
+:root {
+  /* Primary Colors (Dark theme) */
+  --color-primary-10: rgb(26, 26, 26, 0.1);
+  --color-primary-20: rgb(26, 26, 26, 0.2);
+  --color-primary-30: rgb(26, 26, 26, 0.3);
+  --color-primary-40: rgb(26, 26, 26, 0.4);
+  --color-primary-50: rgb(26, 26, 26, 0.5);
+  --color-primary-60: rgb(26, 26, 26, 0.6);
+  --color-primary-70: rgb(26, 26, 26, 0.7);
+  --color-primary-80: rgb(26, 26, 26, 0.8);
+  --color-primary-90: rgb(26, 26, 26, 0.9);
+  --color-primary-100: #1a1a1a;
+
+  --color-primary-blur: rgba(229, 229, 229, 0.133);
+
+  /* Secondary Colors (Light theme) */
+  --color-secondary-10: rgb(229, 229, 229, 0.1);
+  --color-secondary-20: rgb(229, 229, 229, 0.2);
+  --color-secondary-30: rgb(229, 229, 229, 0.3);
+  --color-secondary-40: rgb(229, 229, 229, 0.4);
+  --color-secondary-50: rgb(229, 229, 229, 0.5);
+  --color-secondary-60: rgb(229, 229, 229, 0.6);
+  --color-secondary-70: rgb(229, 229, 229, 0.7);
+  --color-secondary-80: rgb(229, 229, 229, 0.8);
+  --color-secondary-90: rgb(229, 229, 229, 0.9);
+  --color-secondary-100: #e5e5e5;
+
+  /* Effects and Accents */
+  --glassmorphism-color: rgba(168, 168, 168, 0.3);
+  --accent-color: #4de297;
+  --accent-color-blur: rgba(128, 255, 194, 0.2);
+  --color-disabled: #979797;
+
+  /* Typography */
+  --font-family-primary: "Poppins", sans-serif;
+  
+  /* Spacing */
+  --section-min-height: 100vh;
+  --navbar-height: 6.25rem;
+  --navbar-height-mobile: 4.6875rem;
+  
+  /* Transitions */
+  --transition-fast: 200ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  --transition-loading: 1000ms ease-out;
+}
+
+/* Light Mode Variables (commented out for future implementation) */
+/*
+.light-mode {
+  --color-primary-10: rgb(229, 229, 229, 0.1);
+  --color-primary-20: rgb(229, 229, 229, 0.2);
+  --color-primary-30: rgb(229, 229, 229, 0.3);
+  --color-primary-40: rgb(229, 229, 229, 0.4);
+  --color-primary-50: rgb(229, 229, 229, 0.5);
+  --color-primary-60: rgb(229, 229, 229, 0.6);
+  --color-primary-70: rgb(229, 229, 229, 0.7);
+  --color-primary-80: rgb(229, 229, 229, 0.8);
+  --color-primary-90: rgb(229, 229, 229, 0.9);
+  --color-primary-100: #319261;
+
+  --color-secondary-10: rgb(26, 26, 26, 0.1);
+  --color-secondary-20: rgb(26, 26, 26, 0.2);
+  --color-secondary-30: rgb(26, 26, 26, 0.3);
+  --color-secondary-40: rgb(26, 26, 26, 0.4);
+  --color-secondary-50: rgb(26, 26, 26, 0.5);
+  --color-secondary-60: rgb(26, 26, 26, 0.6);
+  --color-secondary-70: rgb(26, 26, 26, 0.7);
+  --color-secondary-80: rgb(26, 26, 26, 0.8);
+  --color-secondary-90: rgb(26, 26, 26, 0.9);
+  --color-secondary-100: #1a1a1a;
+
+  --color-secondary-blur: rgba(229, 229, 229, 0.133);
+  --glassmorphism-color: rgba(177, 177, 177, 0.565);
+  --accent-color: #e5e5e5;
+  --accent-color-blur: rgba(128, 255, 194, 0.2);
+}
+*/ 
