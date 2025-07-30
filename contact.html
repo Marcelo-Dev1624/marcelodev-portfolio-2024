@@ -123,13 +123,22 @@
 
             <div class="cv-container flex flex-col gap-4">
                 <h1 class="header-text-3 accent">Download my CV</h1>
-                <a href="/images/1Asset 11@3x.png" class="btn glassmorphism secondary mv-h3 mobile-full" download="/images/1Asset 11@3x.png"><i
-                        class="fa-solid fa-file-arrow-down mx-2 "></i>Download</a>
+                <a href="/images/1Asset 11@3x.png" class="btn glassmorphism secondary mv-h3 mobile-full" download="/images/1Asset 11@3x.png">
+                    <i class="fa-solid fa-file-arrow-down mx-2 "></i>Download
+                </a>
             </div>
 
             <div class="email-container flex flex-col gap-4">
                 <h1 class="header-text-3 accent">My Email</h1>
-                <a class="btn mobile-full glassmorphism secondary mv-h3" >marcelodev1624@gmail.com</a>
+                <a
+  id="copyEmailBtn"
+  class="btn mobile-full glassmorphism secondary mv-h3"
+  data-email="marcelodev1624@gmail.com"
+  style="cursor:pointer;"
+>
+  <i class="fa-solid fa-envelope mx-2"></i>marcelodev1624@gmail.com
+</a>
+<span id="copyEmailMsg" style="display:none; margin-left:10px; color:var(--accent-color);">Copied!</span>
             </div>
 
             <div class="socials-container grid grid-cols-1">
@@ -168,7 +177,7 @@
 
     </section>
 
-    <div class="footer glassmorphism">
+    <div id="footer" class="footer elements-animation-hidden glassmorphism">
         <div class="footer-logo">
             <img class="" src="images/logo_completo_blanco.png" alt="">
         </div>
@@ -179,7 +188,7 @@
                 <ul>
                     <li><a class="" href="https://github.com/marcelo-dev1624" target="_blank"><i class="fab fab fa-github mx-1"></i>Github</a></li>
                     <div class="line"></div>
-                    <li><a class="" href="https://instagram.com/marcelo_v1624" target="_blank"><i class="fab fab fab fa-instagram mx-1"></i>Instagram</a></li>
+                    <li><a class="" href="https://instagram.com/marcelo.v1624" target="_blank"><i class="fab fab fab fa-instagram mx-1"></i>Instagram</a></li>
                     <div class="line"></div>
                     <li><a class="" href="https://www.linkedin.com/in/marcelo-villalobos-400965244/" target="_blank"><i class="fab fab fab fa-linkedin mx-1"></i>LinkedIn</a></li>
                 </ul>
@@ -210,6 +219,24 @@
     <script src="js/animationObserver.js"></script>
 
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="marcelodev" data-description="Support me on Buy me a coffee!" data-message="" data-color="#4de297" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const copyBtn = document.getElementById('copyEmailBtn');
+  const copyMsg = document.getElementById('copyEmailMsg');
+  if (copyBtn && copyMsg) {
+    copyBtn.addEventListener('click', function () {
+      const email = copyBtn.getAttribute('data-email');
+      navigator.clipboard.writeText(email).then(function () {
+        copyMsg.style.display = 'inline';
+        setTimeout(() => {
+          copyMsg.style.display = 'none';
+        }, 1500);
+      });
+    });
+  }
+});
+</script>
 
 </body>
 
