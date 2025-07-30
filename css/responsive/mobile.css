@@ -442,6 +442,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 1.5rem 0;
+    gap: 2rem;
   }
 
   .contact-aside {
@@ -449,35 +451,82 @@
     height: 100%;
     flex-wrap: wrap-reverse;
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    padding: 1.5rem;
+    gap: 2rem;
   }
 
   .contact-form {
     width: 100%;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 3rem auto 0 auto;
     display: flex;
     flex-direction: column;
     z-index: 1;
+    padding: 1.5rem;
+    gap: 1rem;
   }
 
   .contact-form-input-group {
     width: 100%;
+    margin-bottom: 0.5rem;
   }
 
   .contact-form-single-element-row {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 1rem 0;
   }
   
   .contact-form-two-element-row {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  /* Mejorar alineación de iconos sociales en móviles */
+  .socials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .social-icons-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Contact aside buttons - make them same size on mobile */
+  .contact-aside {
+    & .cv-container,
+    & .email-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      
+      & .btn {
+        width: 100%;
+        max-width: 280px;
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+    }
   }
 
   /* Footer Mobile */
@@ -990,6 +1039,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 1.5rem 0;
+    gap: 2rem;
   }
 
   .contact-aside {
@@ -997,35 +1048,82 @@
     height: 100%;
     flex-wrap: wrap-reverse;
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    padding: 1.5rem;
+    gap: 2rem;
   }
 
   .contact-form {
     width: 100%;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 3rem auto 0 auto;
     display: flex;
     flex-direction: column;
     z-index: 1;
+    padding: 1.5rem;
+    gap: 1rem;
   }
 
   .contact-form-input-group {
     width: 100%;
+    margin-bottom: 0.5rem;
   }
 
   .contact-form-single-element-row {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 1rem 0;
   }
   
   .contact-form-two-element-row {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  /* Mejorar alineación de iconos sociales en móviles */
+  .socials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .social-icons-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Contact aside buttons - make them same size on mobile */
+  .contact-aside {
+    & .cv-container,
+    & .email-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      
+      & .btn {
+        width: 100%;
+        max-width: 280px;
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+    }
   }
 
   /* Footer Mobile */

@@ -255,6 +255,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem 0;
+    gap: 2.5rem;
   }
 
   .contact-aside {
@@ -273,6 +275,50 @@
     margin: 0;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    max-width: 700px;
+  }
+
+  /* Mejorar alineación de iconos sociales en tablets */
+  .socials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .social-icons-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Contact aside buttons - make them same size on tablet */
+  .contact-aside {
+    & .cv-container,
+    & .email-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      
+      & .btn {
+        width: 100%;
+        max-width: 220px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0.75rem;
+        font-size: 0.85rem;
+      }
+    }
   }
 
   .cv-container {
