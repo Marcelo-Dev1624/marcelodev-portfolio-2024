@@ -77,8 +77,9 @@
   .about-elements {
     width: 90%;
     margin: 3rem 0;
-    height: auto; /* Remove fixed height constraint */
-    min-height: auto; /* Allow natural height */
+    min-height: 400px;
+    max-height: 600px;
+    height: auto;
     display: flex;
     flex-direction: row; /* Keep horizontal layout on iPad mini */
     align-items: stretch; /* Stretch children to full height */
@@ -87,15 +88,13 @@
     animation: float infinite 5s;
     
     & .about-image {
-      flex-basis: 35%;
-      height: auto; /* Allow natural height */
-      min-height: 350px; /* Set minimum height for image */
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      flex: 0 0 35%;
       border-radius: 15px 0 0 15px;
       border-right: 5px solid var(--color-primary-100);
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       
       & img {
         width: 100%;
@@ -105,10 +104,11 @@
     }
     
     & .about-body {
-      flex-basis: 65%;
+      flex: 1 1 0;
       display: flex;
       flex-direction: column;
-      height: auto; /* Allow natural height */
+      justify-content: space-between;
+      height: 100%;
       border-radius: 0 15px 15px 0;
       
       & .about-title {
@@ -127,15 +127,23 @@
       }
       
       & .about-text {
-        flex-grow: 1; /* Allow text to grow and fill available space */
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 2rem;
-        overflow: visible; /* Ensure content is not cut off */
         
         & .btn {
           width: auto;
           min-width: 150px;
           margin-top: 1rem;
         }
+      }
+      
+      & .btn {
+        width: 30% !important;
+        align-self: flex-end;
+        margin: 1rem;
       }
     }
   }
