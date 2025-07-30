@@ -1,22 +1,9 @@
 /* CONTACT PAGE STYLES */
-.header-text-1 { font-size: 3.5rem; }
-  .header-text-2 { font-size: 2.5rem; }
-  .header-text-3 { font-size: 2rem; }
-  .mv-h1 { font-size: 1.5rem; }
-  .mv-h2 { font-size: 1.25rem; }
-  .mv-h3 { font-size: 1.1rem; }
-  .mv-text { font-size: 1.1rem; }
-  .home-elements img,
-  .about-image img {
-    max-width: 70vw;
-  }
-
 
 #Contact {
   overflow: hidden;
   z-index: 1;
   min-height: 100vh;
-  gap: 3rem;
 }
 
 .contact-aside {
@@ -27,14 +14,6 @@
   align-items: center;
   z-index: 1;
 }
-
-.contact-form {
-  width: 50%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 
 .social-media-icon {
   font-size: 32px;
@@ -99,14 +78,6 @@
     align-items: center;
     z-index: 1;
   }
-
-  .contact-form {
-    width: 75%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
 
   .social-media-icon {
     font-size: 28px;

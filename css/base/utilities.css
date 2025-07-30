@@ -1,0 +1,78 @@
+/* UTILITY CLASSES */
+
+/* Display Utilities */
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.desktop-hidden {
+  display: none;
+  opacity: 0;
+}
+
+.mobile-hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* Animation Utilities */
+.elements-animation-hidden {
+  opacity: 0;
+  transition: var(--transition-slow);
+}
+
+.elements-animation-show {
+  opacity: 1;
+}
+
+/* Layout Utilities */
+.section {
+  min-height: var(--section-min-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glassmorphism Effect */
+.glassmorphism {
+  background-color: var(--glassmorphism-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(100, 100, 100, 0.4);
+}
+
+/* Feature Box */
+.feature-box {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-box > * {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+}
+
+/* Line Utilities */
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary-blur);
+}
+
+.line-mobile,
+.line-vertical-mobile {
+  display: none;
+}
+
+.line-vertical {
+  width: 2px;
+  height: 80vh;
+  background-color: var(--color-primary-blur);
+} 

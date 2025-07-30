@@ -5,28 +5,21 @@
 }
 
 .about-elements {
+  z-index: 1000;
   display: flex;
-  flex-direction: row;
   width: 85%;
-  height: 500px; /* or min-height: 500px; for responsiveness */
+  height: 50%;
   margin: 5rem 0;
   transition: var(--transition-normal);
   background-color: var(--glassmorphism-color);
   animation: float infinite 5s;
   border-radius: 15px;
 
-  & > .about-image,
-  & > .about-body {
-    height: 100%;
-  }
-
   & .about-image {
     flex-basis: 35%;
     border-radius: 15px 0 0 15px;
     border-right: 5px solid var(--color-primary-100);
     overflow: hidden;
-    height: 100%;
-    flex-direction: row;
 
     & img {
       width: 100%;
@@ -41,10 +34,7 @@
     flex-basis: 65%;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    align-items: space-between;
     width: 100%;
-    height: 100%;
     flex-direction: column;
     overflow: hidden;
     border-radius: 0 15px 15px 0;
@@ -164,4 +154,4 @@
       }
     }
   }
-}
+} 
