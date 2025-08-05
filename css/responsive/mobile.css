@@ -502,7 +502,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   /* Contact aside buttons - make them same size on mobile */
@@ -1099,7 +1100,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   /* Contact aside buttons - make them same size on mobile */
